@@ -33,7 +33,7 @@
   grid-column: span 2;
 }
 
-.ExperimentGoal {
+.ExperimentParagraph {
   grid-column: span 2;
 }
 
@@ -77,6 +77,7 @@
 
 .ExperimentTodos-todo p {
   font-weight: 300;
+  margin-bottom: 0.5rem;
 }
 
 .ExperimentTodos-todo.done {
@@ -100,4 +101,16 @@
   font-weight: 300;
   margin-right: 0.5rem;
   font-size: 0.75rem;
+}
+
+.ExperimentReference {
+  display: inline;
+  color: var(--color-green);
+}
+
+.ExperimentReference sup {
+  color: var(--color-green);
+  font-weight: 300;
+  vertical-align: super;
+  font-size: smaller;
 }

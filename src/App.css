@@ -25,6 +25,10 @@ a {
   display: flex;
 }
 
+.AppHero-item a {
+  display: flex;
+}
+
 .AppHero-item img {
   width: 3rem;
   height: 3rem;
@@ -92,4 +96,19 @@ a {
   height: 80vh;
   max-height: 80vh;
   overflow: auto;
+}
+
+.SignButton {
+  display: flex;
+  height: 2rem;
+  align-self: center;
+}
+
+.SignButton div {
+  align-self: center;
+  margin-right: 1rem;
+}
+
+.SignButton div p {
+  margin-bottom: 0.5rem;
 }

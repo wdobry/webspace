@@ -3,11 +3,12 @@ import React from "react";
 import {
   ExperimentCard,
   ExperimentInfo,
-  ExperimentGoal,
+  ExperimentParagraph,
   ExperimentTitle,
   ExperimentStatus,
   ExperimentTodos,
   ExperimentReferences,
+  ExperimentReference,
 } from "components/experimentComponents";
 
 import { Experiment } from "./Experiment";
@@ -16,29 +17,54 @@ import "./Ray.css";
 
 export const Ray = () => {
   const todos = [
-    { todo: "This item has been done", status: "done" },
-    { todo: "This item is in progress", status: "doing" },
-    { todo: "This item needs to be done", status: "todo" },
-    { todo: "This item needs to be done", status: "todo" },
-    { todo: "This item needs to be done", status: "todo" },
+    {
+      todo:
+        "Proof of concept - line-line intersection (between pointer vector and given element.",
+      status: "done",
+    },
+    {
+      todo:
+        "Fix useRelativeMousePosition hook to take scroll position into account.",
+      status: "todo",
+    },
+    {
+      todo: "Test on Pointer Lock API with regular division elements.",
+      status: "todo",
+    },
+    { todo: "Snap pointer to closest division element.", status: "todo" },
+    {
+      todo: "Create testing environment and test on real examples.",
+      status: "todo",
+    },
+    {
+      todo:
+        "Publish project on NPM that allows tests with two simple wrappers.",
+      status: "todo",
+    },
   ];
 
-  const references = [
-    { id: 1, title: "React Spring", url: "http://www.example.com" },
-    { id: 2, title: "React Spring", url: "http://www.example.com" },
-    { id: 3, title: "React Spring", url: "http://www.example.com" },
-    { id: 4, title: "React Spring", url: "http://www.example.com" },
-  ];
+  const references = {
+    1: { title: "React Spring", url: "https://www.react-spring.io/" },
+    2: {
+      title: "Line-line intersection",
+      url: "https://en.wikipedia.org/wiki/Line%E2%80%93line_intersection",
+    },
+  };
 
   return (
     <ExperimentCard>
-      <ExperimentTitle>Ray Tracing on DOM Elements</ExperimentTitle>
+      <ExperimentTitle>Predict Pointer Position and Snap It</ExperimentTitle>
       <ExperimentInfo>
-        Phasellus dignissim diam nec tortor cursus lacinia. Aliquam erat
-        volutpat. In lorem risus, fermentum a pretium consectetur, suscipit vel
-        urna. Praesent rutrum purus ut eros sollicitudin pretium. Donec maximus
-        nisi eu mollis vehicula. Nulla pellentesque diam sed erat finibus
-        facilisis et bibendum nisl.
+        This experiment is intended to test the hypothesis that attracting the
+        cursor to the interactive elements of an HTML document alone will make
+        it easier to navigate the document. To see the future path of the cursor
+        I use its vector created from the actual point on which the cursor is
+        located, and the point attached to it with a{" "}
+        <ExperimentReference id="1">spring</ExperimentReference>. Each
+        interactive element is given two lines on theirs diagonals.{" "}
+        <ExperimentReference id="2">Line-line intersection</ExperimentReference>{" "}
+        (between pointer vector and interactive element diagonals) is used to
+        determine the closet interactive element.
       </ExperimentInfo>
       <div className="Experiment" style={{ gridColumn: "span 3" }}>
         <Experiment />
@@ -48,12 +74,14 @@ export const Ray = () => {
         <ExperimentTodos list={todos} />
         <ExperimentReferences references={references} />
       </div>
-      <ExperimentGoal>
-        In lorem risus, fermentum a pretium consectetur, suscipit vel urna.
-        Praesent rutrum purus ut eros sollicitudin pretium. Donec maximus nisi
-        eu mollis vehicula. Nulla pellentesque diam sed erat finibus facilisis
-        et bibendum nisl.
-      </ExperimentGoal>
+      <ExperimentParagraph title="Entry : 1604329157">
+        The first step in this experiment was to create a working interaction to
+        detect the point of intersection between the cursor vector and any
+        interface element. To visualize the interaction itself I used SVG and
+        DOM models. SVG is used to draw points forming the vector, the vector
+        itself, the radius coming out of the vector and the intersection point
+        with the element itself.
+      </ExperimentParagraph>
     </ExperimentCard>
   );
 };

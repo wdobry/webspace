@@ -3,7 +3,7 @@ import React from "react";
 import {
   ExperimentCard,
   ExperimentInfo,
-  ExperimentGoal,
+  ExperimentParagraph,
   ExperimentTitle,
   ExperimentStatus,
   ExperimentTodos,
@@ -16,28 +16,21 @@ import "./Snap.css";
 
 export const Snap = () => {
   const todos = [
-    { todo: "This item has been done", status: "done" },
-    { todo: "This item is in progress", status: "doing" },
-    { todo: "This item needs to be done", status: "todo" },
-    { todo: "This item needs to be done", status: "todo" },
+    { todo: "Publish initial exeriment", status: "done" },
+    { todo: "Define next steps", status: "doing" },
   ];
 
-  const references = [
-    { id: 1, title: "React Spring", url: "http://www.example.com" },
-    { id: 2, title: "React Spring", url: "http://www.example.com" },
-    { id: 3, title: "React Spring", url: "http://www.example.com" },
-    { id: 4, title: "React Spring", url: "http://www.example.com" },
-  ];
+  const references = {};
 
   return (
     <ExperimentCard>
       <ExperimentTitle>Snap to DOM Element</ExperimentTitle>
       <ExperimentInfo>
-        Phasellus dignissim diam nec tortor cursus lacinia. Aliquam erat
-        volutpat. In lorem risus, fermentum a pretium consectetur, suscipit vel
-        urna. Praesent rutrum purus ut eros sollicitudin pretium. Donec maximus
-        nisi eu mollis vehicula. Nulla pellentesque diam sed erat finibus
-        facilisis et bibendum nisl.
+        The initial idea was to create a small React library that would allow to
+        pin a single element to any other element. The pinned element should
+        manage its own state and the library should provide a hook to create its
+        own interactions. This hook should return the function that determines
+        the next element to which the component will be pinned.
       </ExperimentInfo>
       <div className="Experiment" style={{ gridColumn: "span 3" }}>
         <Experiment />
@@ -47,12 +40,10 @@ export const Snap = () => {
         <ExperimentTodos list={todos} />
         <ExperimentReferences references={references} />
       </div>
-      <ExperimentGoal>
-        In lorem risus, fermentum a pretium consectetur, suscipit vel urna.
-        Praesent rutrum purus ut eros sollicitudin pretium. Donec maximus nisi
-        eu mollis vehicula. Nulla pellentesque diam sed erat finibus facilisis
-        et bibendum nisl.
-      </ExperimentGoal>
+      <ExperimentParagraph title="Entry : 1604330666">
+        This is only the initial setup of the experiment. Further work should be
+        specified.
+      </ExperimentParagraph>
     </ExperimentCard>
   );
 };

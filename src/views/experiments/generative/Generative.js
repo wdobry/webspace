@@ -3,7 +3,7 @@ import React from "react";
 import {
   ExperimentCard,
   ExperimentInfo,
-  ExperimentGoal,
+  ExperimentParagraph,
   ExperimentTitle,
   ExperimentStatus,
   ExperimentTodos,
@@ -33,11 +33,12 @@ export const Generative = () => {
     <ExperimentCard>
       <ExperimentTitle>Generative Poster Design</ExperimentTitle>
       <ExperimentInfo>
-        Phasellus dignissim diam nec tortor cursus lacinia. Aliquam erat
-        volutpat. In lorem risus, fermentum a pretium consectetur, suscipit vel
-        urna. Praesent rutrum purus ut eros sollicitudin pretium. Donec maximus
-        nisi eu mollis vehicula. Nulla pellentesque diam sed erat finibus
-        facilisis et bibendum nisl.
+        This experiment proves a concept for system that requires huge scaling
+        and is based on non-user-made content. Graphics created generatively
+        should allow for unlimited scaling of such a system on any plane. The
+        experiment aims to establish the number of variables needed for a given
+        project, so that the system is resistant to the constantly coming new
+        content.
       </ExperimentInfo>
       <div className="Experiment" style={{ gridColumn: "span 3" }}>
         <Experiment />
@@ -47,12 +48,10 @@ export const Generative = () => {
         <ExperimentTodos list={todos} />
         <ExperimentReferences references={references} />
       </div>
-      <ExperimentGoal>
-        In lorem risus, fermentum a pretium consectetur, suscipit vel urna.
-        Praesent rutrum purus ut eros sollicitudin pretium. Donec maximus nisi
-        eu mollis vehicula. Nulla pellentesque diam sed erat finibus facilisis
-        et bibendum nisl.
-      </ExperimentGoal>
+      <ExperimentParagraph title="Entry : 1604332013">
+        This is only the initial setup of the experiment. Further work should be
+        specified.
+      </ExperimentParagraph>
     </ExperimentCard>
   );
 };

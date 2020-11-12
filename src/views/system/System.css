@@ -721,7 +721,7 @@ a {
 
 .button-primary {
   outline: var(--debug);
-  background: none;
+  background: var(--color-tt-00);
   border: 2px solid var(--color-c2-1);
   padding: var(--size-01) var(--size-03);
   color: var(--color-c2-1);
@@ -729,4 +729,17 @@ a {
   letter-spacing: 0.2rem;
   cursor: pointer;
   font-size: 0.75rem;
+  transition: all 250ms ease;
+}
+.button-primary:hover {
+  outline: var(--debug);
+  background: var(--color-c2-5);
+  border: 2px solid var(--color-c2-1);
+  padding: var(--size-01) var(--size-03);
+  color: var(--color-c2-1);
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  cursor: pointer;
+  font-size: 0.75rem;
+  transition: all 250ms ease;
 }

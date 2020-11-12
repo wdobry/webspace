@@ -1,32 +1,17 @@
-@import url("https://use.typekit.net/rpq3ajh.css");
-
 :root {
-  /* COLORS */
-  --color-transparent: rgba(0, 0, 0, 0);
-  --color-background: rgb(20, 20, 20);
-  --color-primary: rgb(250, 250, 250);
-  --color-white: rgb(250, 250, 250);
-  --color-white-80: rgb(250, 250, 250);
-  --color-white-10: rgba(250, 250, 250, 0.1);
-  --color-white-05: rgba(250, 250, 250, 0.05);
-  --color-black: rgb(0, 0, 0);
-  --color-light-gray: rgb(129, 129, 129);
-  --color-dark-gray: rgb(59, 59, 59);
-  --color-green: rgba(156, 252, 156, 1);
-  --color-green-05: rgba(156, 252, 156, 0.05);
-  --color-green-50: rgba(156, 252, 156, 0.5);
-  --color-green-30: rgba(156, 252, 156, 0.3);
-  --color-green-15: rgba(156, 252, 156, 0.15);
-  --color-red: rgba(255, 192, 203, 1);
-  --color-red-50: rgba(255, 192, 203, 0.5);
-  --color-red-30: rgba(255, 192, 203, 0.3);
-  --x: 0;
-  --y: 0;
+}
+
+html {
+  font-size: calc(1vw + 2px);
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
 }
 
 body {
-  background: var(--color-background);
-  color: var(--color-primary);
+  background: var(--color-bg-1);
+  color: var(--color-fg-1);
   overflow: hidden;
 }
 
@@ -39,26 +24,26 @@ body {
   height: 0px;
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--color-white);
-  border: 0px none var(--color-white);
+  background: var(--color-fg-1);
+  border: 0px none var(--color-fg-1);
   border-radius: 50px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-white);
+  background: var(--color-fg-1);
 }
 ::-webkit-scrollbar-thumb:active {
-  background: var(--color-black);
+  background: var(--color-bg-1);
 }
 ::-webkit-scrollbar-track {
-  background: var(--color-light-gray);
-  border: 0px none var(--color-white);
+  background: var(--color-fg-1);
+  border: 0px none var(--color-fg-1);
   border-radius: 50px;
 }
 ::-webkit-scrollbar-track:hover {
-  background: var(--color-light-gray);
+  background: var(--color-fg-1);
 }
 ::-webkit-scrollbar-track:active {
-  background: var(--color-dark-gray);
+  background: var(--color-mg-1);
 }
 ::-webkit-scrollbar-corner {
   background: transparent;

@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Wojciech Dobry",
+  "name": "Wojciech Dobry WebSpace",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +20,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "var(--color-black)",
-  "background_color": "var(--color-white)"
+  "theme_color": "white",
+  "background_color": "black"
 }

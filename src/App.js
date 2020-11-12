@@ -1,11 +1,14 @@
 import React from "react";
 import { BrowserRouter as Router, NavLink, Route } from "react-router-dom";
-import { Experiments } from "views/experiments/Experiments";
-import { Ray } from "views/experiments/ray/Ray";
-import { Snap } from "views/experiments/snap/Snap";
-import { Generative } from "views/experiments/generative/Generative";
+import { Ray } from "views/sketches/ray/Ray";
+import { Snap } from "views/sketches/snap/Snap";
+import { Generative } from "views/sketches/generative/Generative";
 import { About } from "views/about/About";
 import { Hi } from "views/hi/Hi";
+import { System } from "views/system/System";
+import { Particles } from "views/sketches/particles/Particles";
+
+import { Menu } from "components/Menu";
 
 import Avatar from "assets/me.png";
 
@@ -38,98 +41,80 @@ const App = () => {
 
   return (
     <Router>
-      <div className="App">
-        <div className="AppHero">
-          <div className="AppHero-item">
-            <NavLink exact to="/">
-              <img src={Avatar} alt="Just me" />
+      <div className="App lay-grid-col-12">
+        {/* MENU */}
+        <div className="span-dc-12 lay-grid-col-5 pad-f-1  ">
+          <div className="lay-stack-horizontal ">
+            <NavLink
+              exact
+              to="/"
+              className="lay-stack-horizontal lay-align-center"
+            >
+              <img
+                src={Avatar}
+                alt="Just me"
+                style={{ width: "var(--size-08)" }}
+                className="mar-r-2"
+              />
               <div>
-                <p>The web space of</p>
-                <h1>Wojciech Dobry</h1>
+                <p className="f-l-3">The web space of</p>
+                <h1 className="f-l-2">Wojciech Dobry</h1>
               </div>
             </NavLink>
           </div>
-          <div className="AppHero-item">
+          <div className="lay-stack-horizontal lay-align-center">
             <div>
-              <p>Curently living in</p>
-              <h2>Taipei, Taiwan</h2>
+              <p className="f-l-3">Curently living in</p>
+              <h2 className="f-l-2">Taipei, Taiwan</h2>
             </div>
           </div>
-          <div className="AppHero-item">
+          <div className="lay-stack-horizontal lay-align-center">
             <div>
-              <p>Available from</p>
-              <h2>December 16, 2020</h2>
+              <p className="f-l-3">Available from</p>
+              <h2 className="f-l-2">December 16, 2020</h2>
             </div>
           </div>
-          {user && <SignOut />}
+          <div className="lay-stack-horizontal lay-align-center">
+            <div>
+              <p className="f-l-3">
+                Educated as an architect-engineer. Loves creative coding. Hyper
+                maniac of systemic approach to everything.
+              </p>
+            </div>
+          </div>
+          <div
+            className="lay-stack-horizontal lay-align-center pad-r-6"
+            style={{ justifySelf: "right" }}
+          >
+            {user && <SignOut user={user} />}
+          </div>
         </div>
-        <div className="AppNav">
-          <p className="AppNav-group">Work</p>
-          <NavLink
-            className="disabled"
-            activeClassName="active"
-            exact
-            to="/work/phase"
-          >
-            Phase
-          </NavLink>
-          <NavLink
-            className="disabled"
-            activeClassName="active"
-            exact
-            to="/work/motherlode"
-          >
-            Motherlode
-          </NavLink>
-          <NavLink
-            className="disabled"
-            activeClassName="active"
-            exact
-            to="/work/levelfields"
-          >
-            Levelfields
-          </NavLink>
-          <NavLink
-            className="disabled"
-            activeClassName="active"
-            exact
-            to="/work/contractbook"
-          >
-            Contractbook
-          </NavLink>
-          <NavLink
-            className="disabled"
-            activeClassName="active"
-            exact
-            to="/work/contractbook"
-          >
-            QuichiQuichi
-          </NavLink>
-          <p className="AppNav-group">Experiments</p>
-          <NavLink activeClassName="active" exact to="/experiments/ray">
-            Predict Pointer Position
-          </NavLink>
-          <NavLink activeClassName="active" exact to="/experiments/snap">
-            Snap to Element
-          </NavLink>
-          <NavLink activeClassName="active" exact to="/experiments/generative">
-            Generative Design
-          </NavLink>
-        </div>
-        <div className="AppView">
+        <Menu />
+        <div className="AppView lay-grid-col-3">
           {!user ? (
             <>
-              No elo, kliknij lognij: <SignIn />
+              <SignIn />
             </>
           ) : (
             <>
-              <Route path="/" children={<Hi />} exact />
-              <Route path="/experiments" children={<Experiments />} exact />
-              <Route path="/about" children={<About />} exact />
-              <Route path="/experiments/ray" children={<Ray />} exact />
-              <Route path="/experiments/snap" children={<Snap />} exact />
               <Route
-                path="/experiments/generative"
+                path="/"
+                children={
+                  <Hi userName={user.displayName} userAvatar={user.photoURL} />
+                }
+                exact
+              />
+              <Route path="/system" children={<System />} exact />
+              <Route path="/about" children={<About />} exact />
+              <Route path="/sketches/ray" children={<Ray />} exact />
+              <Route path="/sketches/snap" children={<Snap />} exact />
+              <Route
+                path="/sketches/particles"
+                children={<Particles />}
+                exact
+              />
+              <Route
+                path="/sketches/generative"
                 children={<Generative />}
                 exact
               />
@@ -148,19 +133,27 @@ const SignIn = () => {
   };
 
   return (
-    <div className="SignButton">
-      <button className="sign-in" onClick={signInWithGoogle}>
-        Sign in with Google
+    <div
+      className="mar-t-6 pad-l-4 pad-r-6"
+      style={{ gridColumn: "span 2", width: "70%" }}
+    >
+      <h2 className="f-h-2">Hey this website is only for logged in friends.</h2>
+      <p className="f-b-2 mar-b-2">
+        It meant to represent 00’ approach for WorldWideWeb design, where guests
+        can leave their footprint forever and become a part of the experience.
+      </p>
+      <button className="button-primary" onClick={signInWithGoogle}>
+        Continue with Google
       </button>
     </div>
   );
 };
 
-const SignOut = () => {
+const SignOut = ({ user }) => {
   return (
     auth.currentUser && (
       <div className="SignButton">
-        <button className="sign-out" onClick={() => auth.signOut()}>
+        <button className="button-primary" onClick={() => auth.signOut()}>
           Sign Out
         </button>
       </div>

@@ -35,7 +35,9 @@ export const Menu = () => {
       <Link to="/sketches/ray">Predict Pointer Position</Link>
       <Link to="/sketches/snap">Snap to Element</Link>
       <Link to="/sketches/generative">Generative Design</Link>
-      <Link to="/sketches/particles">Wave Particles</Link>
+      <Link to="/sketches/particles/1/1/0/0/0/1/1/0/0/0/0/25/125/-0.25/0.75">
+        Wave Particles
+      </Link>
     </div>
   );
 };

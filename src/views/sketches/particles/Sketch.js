@@ -2,6 +2,8 @@ import React, { useReducer, useRef, useEffect } from "react";
 import { Canvas, useFrame, useThree } from "react-three-fiber";
 import * as THREE from "three";
 
+import { useParams } from "react-router";
+
 // import { Sphere, PositionalAudio } from "drei";
 // import { Controls, useControl } from "react-three-gui";
 
@@ -47,7 +49,7 @@ const getRandomArbitrary = (min, max) => {
   return Math.floor(Math.random() * (max - min + 1) + min);
 };
 
-const Plane = ({ position, rotation, wave1, wave2 }) => {
+const Plane = ({ position, rotation, wave1, wave2, currentZoom }) => {
   const mesh = useRef();
   const plane = useRef();
 
@@ -90,7 +92,7 @@ const Plane = ({ position, rotation, wave1, wave2 }) => {
     >
       <planeGeometry ref={plane} args={[100, 100, 200, 200]} />
       <pointsMaterial
-        color={"white"}
+        color={"rgb(255, 255, 255)"}
         size={1}
         fog={true}
         sizeAttenuation={false}
@@ -192,34 +194,52 @@ const WaveControls = ({ name, waveInit, wave, dispatch }) => {
 };
 
 export const Sketch = () => {
+  const {
+    w1f,
+    w1m,
+    w1n,
+    w1px,
+    w1py,
+    w2f,
+    w2m,
+    w2n,
+    w2px,
+    w2py,
+    cx,
+    cy,
+    cz,
+    crx,
+    cry,
+  } = useParams();
+
   const wave1init = {
-    positionX: -25,
-    positionY: -25,
-    freq: 8.5,
-    mag: 4.5,
-    noise: 0.02,
+    positionX: w1px,
+    positionY: w1py,
+    freq: w1f,
+    mag: w1m,
+    noise: w1n,
     animate: false,
   };
 
   const wave2init = {
-    positionX: -25,
-    positionY: 50,
-    freq: 5,
-    mag: 3.5,
-    noise: 0.02,
+    positionX: w2px,
+    positionY: w2py,
+    freq: w2f,
+    mag: w2m,
+    noise: w2n,
     animate: false,
   };
 
   const camInit = {
-    x: 0,
-    y: 0,
-    z: 100,
+    x: cx,
+    y: cy,
+    z: cz,
     zoom: 0,
   };
 
   const rotationInit = {
-    rx: -0.375,
-    ry: 0.75,
+    rx: crx,
+    ry: cry,
   };
 
   const wave1Reducer = (state, action) => {
@@ -281,6 +301,17 @@ export const Sketch = () => {
     rotationReducer,
     rotationInit
   );
+
+  useEffect(() => {
+    const wave1path = `${wave1.freq}/${wave1.mag}/${wave1.noise}/${wave1.positionX}/${wave1.positionY}`;
+    const wave2path = `${wave2.freq}/${wave2.mag}/${wave2.noise}/${wave2.positionX}/${wave2.positionY}`;
+    const camPath = `${cam.x}/${cam.y}/${cam.z}/${rotation.rx}/${rotation.ry}`;
+    window.history.replaceState(
+      null,
+      "New Page Title",
+      `/sketches/particles/${wave1path}/${wave2path}/${camPath}`
+    );
+  }, [wave1, wave2, cam, rotation]);
 
   return (
     <div
@@ -345,6 +376,7 @@ export const Sketch = () => {
             rotation={rotation}
             wave1={wave1}
             wave2={wave2}
+            currentZoom={cam.z}
           />
           {/* <PlaySound url="Exhaust.mp3" /> */}
         </Canvas>

@@ -26,9 +26,9 @@ export const Particles = () => {
     <SketchCard>
       <SketchTitle span={4}>Wave Particles</SketchTitle>
       <SketchInfo span={8}>
-        This is an sketch to explore possibilites of particles system modified
-        by wave functions. The outcome should define the base for Jozek Flakus
-        EP cover.
+        This is a sketch to explore possibilites of particles system modified by
+        wave functions. The outcome should define the base for Jozek Flakus EP
+        cover.
       </SketchInfo>
       <div className="mar-t-2 mar-b-6" style={{ gridColumn: "span 12" }}>
         <Sketch />

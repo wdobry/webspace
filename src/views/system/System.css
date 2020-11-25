@@ -17,23 +17,23 @@
   --cs-4: 0.4;
   --cs-5: 0.2;
   /*  */
-  --color-fg-1: hsla(0, var(--gs), var(--fg), var(--cs-1));
-  --color-fg-2: hsla(0, var(--gs), var(--fg), var(--cs-2));
-  --color-fg-3: hsla(0, var(--gs), var(--fg), var(--cs-3));
-  --color-fg-4: hsla(0, var(--gs), var(--fg), var(--cs-4));
-  --color-fg-5: hsla(0, var(--gs), var(--fg), var(--cs-5));
+  --color-fg-1: hsla(240, var(--gs), var(--fg), var(--cs-1));
+  --color-fg-2: hsla(240, var(--gs), var(--fg), var(--cs-2));
+  --color-fg-3: hsla(240, var(--gs), var(--fg), var(--cs-3));
+  --color-fg-4: hsla(240, var(--gs), var(--fg), var(--cs-4));
+  --color-fg-5: hsla(240, var(--gs), var(--fg), var(--cs-5));
   /*  */
-  --color-bg-1: hsla(0, var(--gs), var(--bg), var(--cs-1));
-  --color-bg-2: hsla(0, var(--gs), var(--bg), var(--cs-2));
-  --color-bg-3: hsla(0, var(--gs), var(--bg), var(--cs-3));
-  --color-bg-4: hsla(0, var(--gs), var(--bg), var(--cs-4));
-  --color-bg-5: hsla(0, var(--gs), var(--bg), var(--cs-5));
+  --color-bg-1: hsla(240, var(--gs), var(--bg), var(--cs-1));
+  --color-bg-2: hsla(240, var(--gs), var(--bg), var(--cs-2));
+  --color-bg-3: hsla(240, var(--gs), var(--bg), var(--cs-3));
+  --color-bg-4: hsla(240, var(--gs), var(--bg), var(--cs-4));
+  --color-bg-5: hsla(240, var(--gs), var(--bg), var(--cs-5));
   /*  */
-  --color-mg-1: hsla(0, var(--gs), var(--mg), var(--cs-1));
-  --color-mg-2: hsla(0, var(--gs), var(--mg), var(--cs-2));
-  --color-mg-3: hsla(0, var(--gs), var(--mg), var(--cs-3));
-  --color-mg-4: hsla(0, var(--gs), var(--mg), var(--cs-4));
-  --color-mg-5: hsla(0, var(--gs), var(--mg), var(--cs-5));
+  --color-mg-1: hsla(240, var(--gs), var(--mg), var(--cs-1));
+  --color-mg-2: hsla(240, var(--gs), var(--mg), var(--cs-2));
+  --color-mg-3: hsla(240, var(--gs), var(--mg), var(--cs-3));
+  --color-mg-4: hsla(240, var(--gs), var(--mg), var(--cs-4));
+  --color-mg-5: hsla(240, var(--gs), var(--mg), var(--cs-5));
   /*  */
   --cs: 100%;
   --c1: 120;
@@ -58,11 +58,7 @@
   --color-c3-4: hsla(var(--c2), var(--cs), 85%, var(--cs-4));
   --color-c3-5: hsla(var(--c2), var(--cs), 85%, var(--cs-5));
 
-  /* SPRAWDZIC CZY TAGI DZIEDZICZA FONTY Z CLASS'Y <BTN Z KLASA><P> </BTN> */
-  /* WTEDY BEDE WIEDZIAL JAK ZROBIC LAYOUT - */
-  /*CZY MOGE PRZYPISYWAC LAYOUT DO KLASS JAK BTN */
-
-  /* DEBU */
+  /* DEBUG */
   --debug: 1px solid red;
   --debug: none;
 
@@ -742,4 +738,84 @@ a {
   cursor: pointer;
   font-size: 0.75rem;
   transition: all 250ms ease;
+}
+
+/* Range */
+
+input[type="range"] {
+  -webkit-appearance: none;
+  margin: var(--size-02) 0;
+  width: 100%;
+}
+input[type="range"]:focus {
+  outline: none;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: calc(var(--size-01) * 0.75);
+  cursor: pointer;
+  box-shadow: none;
+  background: var(--color-mg-2);
+  border: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+  box-shadow: none;
+  border: none;
+  height: var(--size-02);
+  width: var(--size-02);
+  background: var(--color-fg-1);
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+input[type="range"]:focus::-webkit-slider-runnable-track {
+  background: var(--color-mg-2);
+}
+input[type="range"]::-moz-range-track {
+  width: 100%;
+  height: var(--size-02);
+  cursor: pointer;
+  box-shadow: none;
+  background: var(--color-mg-2);
+  border: none;
+}
+input[type="range"]::-moz-range-thumb {
+  box-shadow: none;
+  border: none;
+  height: var(--size-02);
+  width: var(--size-02);
+  background: var(--color-fg-1);
+  cursor: pointer;
+}
+input[type="range"]::-ms-track {
+  width: 100%;
+  height: var(--size-02);
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  border-width: var(--size-02) 0;
+  color: transparent;
+}
+input[type="range"]::-ms-fill-lower {
+  background: var(--color-mg-2);
+  border: none;
+  box-shadow: none;
+}
+input[type="range"]::-ms-fill-upper {
+  background: var(--color-mg-2);
+  border: none;
+  box-shadow: none;
+}
+input[type="range"]::-ms-thumb {
+  box-shadow: none;
+  border: none;
+  height: var(--size-02);
+  width: var(--size-02);
+  background: var(--color-fg-1);
+  cursor: pointer;
+}
+input[type="range"]:focus::-ms-fill-lower {
+  background: var(--color-mg-2);
+}
+input[type="range"]:focus::-ms-fill-upper {
+  background: var(--color-c1-2);
 }

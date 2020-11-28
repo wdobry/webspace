@@ -312,7 +312,7 @@ export const Sketch = () => {
       "New Page Title",
       `/sketches/particles/${wave1path}/${wave2path}/${camPath}/${exp}`
     );
-  }, [wave1, wave2, cam, rotation]);
+  }, [wave1, wave2, cam, rotation, exp]);
 
   return (
     <div
@@ -375,9 +375,9 @@ export const Sketch = () => {
       >
         <Canvas
           pixelRatio={
-            exp >= 0
-              ? window.devicePixelRatio * 1
-              : window.devicePixelRatio * exp
+            exp >= 1
+              ? window.devicePixelRatio * exp
+              : window.devicePixelRatio * 2
           }
           concurrent
         >

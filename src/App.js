@@ -109,7 +109,7 @@ const App = () => {
               <Route path="/sketches/ray" children={<Ray />} exact />
               <Route path="/sketches/snap" children={<Snap />} exact />
               <Route
-                path="/sketches/particles/:w1f/:w1m/:w1n/:w1px/:w1py/:w2f/:w2m/:w2n/:w2px/:w2py/:cx/:cy/:cz/:crx/:cry"
+                path="/sketches/particles/:w1f/:w1m/:w1n/:w1px/:w1py/:w2f/:w2m/:w2n/:w2px/:w2py/:cx/:cy/:cz/:crx/:cry/:exp"
                 children={<Particles />}
                 exact
               />

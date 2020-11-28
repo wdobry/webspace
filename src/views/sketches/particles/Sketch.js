@@ -135,7 +135,7 @@ const Camera = (props) => {
 
 const WaveControls = ({ name, waveInit, wave, dispatch }) => {
   return (
-    <div className="lay-stack-vertical" style={{ width: "20%" }}>
+    <div className="lay-stack-vertical" style={{ width: "100%" }}>
       <p className="f-l-1 mar-b-1">{name}</p>
       <Input
         dispatch={dispatch}
@@ -210,6 +210,7 @@ export const Sketch = () => {
     cz,
     crx,
     cry,
+    exp,
   } = useParams();
 
   const wave1init = {
@@ -309,7 +310,7 @@ export const Sketch = () => {
     window.history.replaceState(
       null,
       "New Page Title",
-      `/sketches/particles/${wave1path}/${wave2path}/${camPath}`
+      `/sketches/particles/${wave1path}/${wave2path}/${camPath}/${exp}`
     );
   }, [wave1, wave2, cam, rotation]);
 
@@ -318,19 +319,26 @@ export const Sketch = () => {
       className="Particles lay-stack-horizontal"
       style={{ justifyContent: "space-between" }}
     >
-      <WaveControls
-        name="Wave 1 - sin"
-        waveInit={wave1init}
-        wave={wave1}
-        dispatch={wave1dispatch}
-      />
-      <WaveControls
-        name="Wave 2 - cos"
-        waveInit={wave2init}
-        wave={wave2}
-        dispatch={wave2dispatch}
-      />
-      <div className="lay-stack-vertical" style={{ width: "20%" }}>
+      <div style={{ width: "20%", display: `${exp >= 1 && "none"}` }}>
+        <WaveControls
+          name="Wave 1 - sin"
+          waveInit={wave1init}
+          wave={wave1}
+          dispatch={wave1dispatch}
+        />
+      </div>
+      <div style={{ width: "20%", display: `${exp >= 1 && "none"}` }}>
+        <WaveControls
+          name="Wave 2 - cos"
+          waveInit={wave2init}
+          wave={wave2}
+          dispatch={wave2dispatch}
+        />
+      </div>
+      <div
+        className="lay-stack-vertical"
+        style={{ width: "20%", display: `${exp >= 1 && "none"}` }}
+      >
         <p className="f-l-1 mar-b-1">Camera</p>
         <Input
           dispatch={camDispatch}
@@ -360,12 +368,19 @@ export const Sketch = () => {
       </div>
       <div
         style={{
-          width: "24rem",
-          height: "24rem",
+          width: exp >= 1 ? "48rem" : "24rem",
+          height: exp >= 1 ? "48rem" : "24rem",
           border: "1px solid var(--color-fg-4)",
         }}
       >
-        <Canvas pixelRatio={window.devicePixelRatio} concurrent>
+        <Canvas
+          pixelRatio={
+            exp >= 0
+              ? window.devicePixelRatio * 1
+              : window.devicePixelRatio * exp
+          }
+          concurrent
+        >
           {/* <ambientLight intensity={0.5} /> */}
           {/* <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} /> */}
           {/* <pointLight position={[-10, -10, -10]} /> */}

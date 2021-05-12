@@ -1,13 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap");
-
 :root {
-  --c-light: hsl(0, 0%, 95%);
-  --g: calc(100vw / 14);
 }
 
 html {
-  font-size: calc(1.05vw + 2px);
-  font-family: "Space Grotesk", sans-serif;
+  font-size: calc(1vw + 2px);
   margin: 0;
   padding: 0;
   border: 0;
@@ -17,6 +12,7 @@ html {
 body {
   background: var(--color-bg-1);
   color: var(--color-fg-1);
+  overflow: hidden;
 }
 
 ::-webkit-scrollbar {

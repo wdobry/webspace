@@ -5,7 +5,7 @@ export const Hero = styled.img`
   top: 3rem;
   left: 45%;
   height: calc((100vw / 14) * 4.75);
-  opacity: 0.9;
+  opacity: 0.3;
   pointer-events: none;
   transition: all 0.35s ease;
 `;
@@ -48,6 +48,7 @@ export const Domain = styled.p`
   max-width: calc((100vw / 14) * 3);
   opacity: 0.7;
   margin-top: 1.5rem;
+  margin-bottom: 0.25rem;
 `;
 
 export const Company = styled.p`

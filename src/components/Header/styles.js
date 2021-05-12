@@ -24,7 +24,7 @@ export const Heading = styled.h2`
 
 export const Paragraph = styled.div`
   line-height: 1.6rem;
-  max-width: calc((var(--g)) * 3);
+  max-width: calc((var(--g)) * 3.2);
   & u {
     text-decoration-color: hsl(0, 0%, 70%);
     &:hover {

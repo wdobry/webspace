@@ -4,8 +4,6 @@ import * as S from "./styles.js";
 
 export const Header = ({ data, background, foreground, image }) => {
   return (
-    // <div>{/* <Route path="/system" children={<System />} exact /> */}</div>
-
     <S.Wrapper background={background} foreground={foreground}>
       <S.Domain>{data.domain}</S.Domain>
       <S.Heading>{data.title}</S.Heading>

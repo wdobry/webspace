@@ -1,19 +1,17 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  margin: calc((100vw / 14) * 2);
-  margin-top: 0;
-  margin-bottom: 2rem;
-  padding: 4rem calc(100vw / 14);
+  margin: 0 calc((100vw / 14) * 2);
+  padding: 1rem calc(100vw / 14);
 `;
 
-export const Title = styled.h1`
+export const Title = styled.p`
   font-size: 1rem;
   max-width: calc((100vw / 14) * 4.5);
   line-height: 1.6rem;
 `;
 
-export const Heading = styled.h3`
+export const Heading = styled.p`
   font-size: 2.2rem;
   font-weight: 700;
   max-width: calc((100vw / 14) * 4.5);
@@ -21,13 +19,8 @@ export const Heading = styled.h3`
   line-height: 3.2rem;
 `;
 
-export const Paragraph = styled.div`
+export const Paragraph = styled.p`
+  display: none;
   line-height: 1.6rem;
-  max-width: calc((100vw / 14) * 3);
-  & u {
-    text-decoration-color: hsl(0, 0%, 70%);
-    &:hover {
-      text-decoration-color: hsl(0, 0%, 20%);
-    }
-  }
+  max-width: calc((100vw / 14) * 4);
 `;

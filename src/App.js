@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 
 import "./Reset.css";
 import "./App.css";
@@ -11,6 +11,7 @@ import ProjectsHeader from "./components/ProjectsHeader/ProjectsHeader";
 
 import phaseCard from "./assets/phase/card.png";
 import motherlodeCard from "./assets/motherlode/card.png";
+import upiesCard from "./assets/upies/card.png";
 
 const App = () => {
   return (
@@ -43,6 +44,7 @@ const App = () => {
           }}
         />
         <ProjectCard
+          image={upiesCard}
           background={"169, 100%, 20%"}
           foreground={"24, 100%, 86%"}
           data={{
@@ -53,7 +55,6 @@ const App = () => {
             role: "UI + UX + Brand + Code",
           }}
         />
-        <div>{/* <Route path="/system" children={<System />} exact /> */}</div>
       </div>
     </Router>
   );

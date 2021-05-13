@@ -57,6 +57,7 @@ export const Info = styled.p`
 
 export const Img = styled.img`
   width: ${({ width = 100 }) => `${width}%`};
+  pointer-events: none;
 `;
 
 export const Intro = styled.p`
@@ -70,7 +71,7 @@ export const SectionTitle = styled.h3`
   font-weight: 700;
   width: calc((100vw / 14) * 6);
   max-width: calc((100vw / 14) * 6);
-  margin: 4rem 0 2rem 0;
+  margin: 2rem 0 1rem 0;
   line-height: 3rem;
 `;
 
@@ -123,8 +124,8 @@ export const Divider = styled.div`
   position: relative;
   display: block;
   width: 1px;
-  height: 6rem;
+  height: 8rem;
   background: ${({ foreground, background }) =>
-    `linear-gradient(hsl(${foreground}) 0%, hsl(${background}) 100%);`};
+    `linear-gradient(hsl(${foreground}) 0%, hsl(${foreground})zzzzzz 50%, hsl(${background}) 100%);`};
   opacity: 0.25;
 `;

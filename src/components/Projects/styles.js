@@ -126,6 +126,6 @@ export const Divider = styled.div`
   width: 1px;
   height: 8rem;
   background: ${({ foreground, background }) =>
-    `linear-gradient(hsl(${foreground}) 0%, hsl(${foreground})zzzzzz 50%, hsl(${background}) 100%);`};
+    `linear-gradient(hsl(${foreground}) 0%, hsl(${foreground}) 50%, hsl(${background}) 100%);`};
   opacity: 0.25;
 `;

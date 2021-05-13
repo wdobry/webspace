@@ -1,12 +1,12 @@
 import React from "react";
 
-import Header from "../Header/Header";
-import ProjectCard from "../ProjectCard/ProjectCard";
-import ProjectsHeader from "../ProjectsHeader/ProjectsHeader";
+import Header from "components/Header/Header";
+import ProjectCard from "components/ProjectCard/ProjectCard";
+import ProjectsHeader from "components/ProjectsHeader/ProjectsHeader";
 
-import phaseCard from "../../assets/phase/card.png";
-import motherlodeCard from "../../assets/motherlode/card.png";
-import upiesCard from "../../assets/upies/card.png";
+import phaseCard from "assets/phase/card.png";
+import motherlodeCard from "assets/motherlode/card.png";
+import upiesCard from "assets/upies/card.png";
 
 export const Home = () => {
   return (

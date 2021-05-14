@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 
 export const Wrapper = styled.div`
   display: flex;
@@ -15,7 +16,7 @@ export const Wrapper = styled.div`
   }
 `;
 
-export const NameWrapper = styled.div`
+export const NameWrapper = styled(NavLink)`
   position: fixed;
   display: flex;
   align-items: center;
@@ -30,7 +31,8 @@ export const NameWrapper = styled.div`
   transform: scale(1);
   transition: all 0.25s ease;
   &:hover {
-    transform: scale(0.9);
+    transform: scale(1.1);
+    background: hsla(0, 0%, 99%, 0.75);
   }
 `;
 
@@ -53,9 +55,10 @@ export const Name = styled.div`
 export const InfoWrapper = styled.div`
   position: fixed;
   display: flex;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   z-index: -1;
   left: 16rem;
+  opacity: 0.75;
 `;
 
 export const Info = styled.div`
@@ -76,7 +79,7 @@ export const InfoSecond = styled.div`
 
 export const LinksWrapper = styled.div`
   position: fixed;
-  right: 12rem;
+  right: 13rem;
   display: flex;
 `;
 
@@ -101,7 +104,9 @@ export const Button = styled.button`
   padding: 0.85rem 1rem;
   /*  */
   border-radius: 2rem;
-  box-shadow: 0 0.5rem 1rem -0.35rem hsla(0, 0%, 0%, 0.15);
+  box-shadow: 0 0.5rem 1rem -0.35rem hsla(0, 0%, 0%, 0.2),
+    inset 0 -1px 0 0 hsla(0, 0%, 0%, 0.1),
+    inset 0 -2px 5px 0 hsla(0, 0%, 100%, 0.7);
   border: 1px solid hsla(0, 0%, 0%, 0.05);
   backdrop-filter: blur(1rem);
   /*  */
@@ -119,6 +124,18 @@ export const Button = styled.button`
   cursor: pointer;
 
   &:hover {
-    transform: scale(0.9);
+    transform: scale(1.1);
+    background: hsla(0, 0%, 99%, 0.75);
   }
+`;
+
+export const Bulb = styled.div`
+  width: 0.75rem;
+  height: 0.75rem;
+  background: hsla(170, 75%, 35%, 1);
+  margin-left: 0.5rem;
+  box-shadow: 0 0.5rem 1rem -0.35rem hsla(0, 0%, 0%, 0.2),
+    inset 0 -1px 0 0 hsla(0, 0%, 0%, 0.1),
+    inset -0.15rem -0.15rem 0.25rem 0 hsla(0, 0%, 100%, 0.5);
+  border-radius: 1rem;
 `;

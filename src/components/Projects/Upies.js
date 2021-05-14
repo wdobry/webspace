@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect } from "react";
 import * as S from "./styles";
 
 import i1 from "assets/upies/1.png";
@@ -7,10 +8,18 @@ import i3 from "assets/upies/3.png";
 import i4 from "assets/upies/4.png";
 import i5 from "assets/upies/5.png";
 import i6 from "assets/upies/6.png";
+import i7 from "assets/upies/7.png";
+import i8 from "assets/upies/8.png";
+import i9 from "assets/upies/9.png";
 
 export const Upies = () => {
   const F = "169, 100%, 20%";
   const B = "24, 100%, 86%";
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <S.Wrapper foreground={F} background={B}>
       <S.Center>
@@ -91,6 +100,38 @@ export const Upies = () => {
       </S.Paragraph>
       <S.Spacer s={3} />
       <S.Img src={i6} width={50}></S.Img>
+      <S.Spacer s={1} />
+      <S.SectionTitle>Wrapping Everything Around</S.SectionTitle>
+      <S.Paragraph>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut lectus
+        sed libero laoreet consectetur. Suspendisse in elit eget odio
+        scelerisque gravida. Sed ac est odio. Aenean hendrerit commodo metus,
+        non cursus erat. Fusce et magna facilisis, sodales lorem bibendum,
+        tincidunt ligula. Phasellus vitae purus purus.
+      </S.Paragraph>
+      <S.Spacer s={3} />
+      <S.Img src={i7} width={80}></S.Img>
+      <S.Spacer s={3} />
+      <S.Paragraph>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut lectus
+        sed libero laoreet consectetur. Suspendisse in elit eget odio
+        scelerisque gravida. Sed ac est odio. Aenean hendrerit commodo metus,
+        non cursus erat. Fusce et magna facilisis, sodales lorem bibendum,
+        tincidunt ligula. Phasellus vitae purus purus.
+      </S.Paragraph>
+      <S.Spacer s={3} />
+      <S.Img src={i8} width={80}></S.Img>
+      <S.Spacer s={3} />
+      <S.SectionTitle>Further Steps</S.SectionTitle>
+      <S.Paragraph>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut lectus
+        sed libero laoreet consectetur. Suspendisse in elit eget odio
+        scelerisque gravida. Sed ac est odio. Aenean hendrerit commodo metus,
+        non cursus erat. Fusce et magna facilisis, sodales lorem bibendum,
+        tincidunt ligula. Phasellus vitae purus purus.
+      </S.Paragraph>
+      <S.Spacer s={3} />
+      <S.Img src={i9} width={100}></S.Img>
     </S.Wrapper>
   );
 };

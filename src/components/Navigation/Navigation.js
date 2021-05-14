@@ -6,7 +6,7 @@ import avatar from "assets/avatar.png";
 export const Navigation = () => {
   return (
     <S.Wrapper>
-      <S.NameWrapper>
+      <S.NameWrapper to="/" exact>
         <S.Avatar src={avatar} />
         <S.Name>Wojciech Dobry</S.Name>
       </S.NameWrapper>
@@ -16,12 +16,8 @@ export const Navigation = () => {
           <S.InfoSecond>Available for Hire</S.InfoSecond>
         </S.Info>
         <S.Info>
-          <S.InfoFirst>Living in</S.InfoFirst>
+          <S.InfoFirst>Curently living in</S.InfoFirst>
           <S.InfoSecond>Taipei, Taiwan</S.InfoSecond>
-        </S.Info>
-        <S.Info>
-          <S.InfoFirst>Curently</S.InfoFirst>
-          <S.InfoSecond>6h ahead of you</S.InfoSecond>
         </S.Info>
       </S.InfoWrapper>
       <S.LinksWrapper>
@@ -29,7 +25,10 @@ export const Navigation = () => {
         <S.Link>Resume</S.Link>
         <S.Link>About</S.Link>
       </S.LinksWrapper>
-      <S.Button>Let's talk!</S.Button>
+      <S.Button>
+        Let's talk!
+        <S.Bulb />
+      </S.Button>
     </S.Wrapper>
   );
 };

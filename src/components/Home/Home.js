@@ -14,6 +14,7 @@ export const Home = () => {
       <Header />
       <ProjectsHeader />
       <ProjectCard
+        linkTo={"phase"}
         image={phaseCard}
         background={"0, 0%, 18%"}
         foreground={"0, 0%, 100%"}
@@ -26,6 +27,7 @@ export const Home = () => {
         }}
       />
       <ProjectCard
+        linkTo={"motherlode"}
         image={motherlodeCard}
         background={"0, 0%, 94%"}
         foreground={"0, 0%, 18%"}
@@ -38,6 +40,7 @@ export const Home = () => {
         }}
       />
       <ProjectCard
+        linkTo={"upies"}
         image={upiesCard}
         background={"169, 100%, 20%"}
         foreground={"24, 100%, 86%"}

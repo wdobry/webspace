@@ -7,13 +7,14 @@ export const Wrapper = styled.div`
   justify-content: center;
   flex-direction: column;
   margin: 2rem calc((100vw / 14));
-  padding: 4rem 0;
+  padding: 4rem 0 0 0;
   border-radius: 0.5rem;
   background: ${({ background }) => `hsla(${background}, 1)`};
   color: ${({ foreground }) => `hsla(${foreground}, 1)`};
   *::selection {
     background: ${({ foreground }) => `hsla(${foreground}, 0.2)`};
   }
+  overflow: hidden;
 `;
 
 export const Center = styled.div`

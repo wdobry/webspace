@@ -1,17 +1,19 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  margin: 2rem calc((var(--g)) * 2);
-  padding: calc(var(--g));
+  margin: 4rem calc((var(--g)));
+  padding: 6rem calc(var(--g) * 2 - 2rem);
   border-radius: 0.5rem;
   background: var(--c-light);
 `;
 
 export const Title = styled.h1`
-  font-size: 1rem;
+  font-size: 1.55rem;
   max-width: calc((var(--g)) * 4.5);
   line-height: 1.6rem;
-  margin-bottom: 3.2rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  display: none;
 `;
 
 export const Heading = styled.h2`

@@ -57,8 +57,10 @@ export const Info = styled.p`
 `;
 
 export const Img = styled.img`
+  position: relative;
   width: ${({ width = 100 }) => `${width}%`};
   pointer-events: none;
+  border-radius: ${({ rad = 0 }) => `${rad}rem`};
 `;
 
 export const Intro = styled.p`
@@ -129,4 +131,22 @@ export const Divider = styled.div`
   background: ${({ foreground, background }) =>
     `linear-gradient(hsl(${foreground}) 0%, hsl(${foreground}) 50%, hsl(${background}) 100%);`};
   opacity: 0.25;
+`;
+
+export const ImgRow = styled.div`
+  position: relative;
+  width: ${({ width = 80 }) => `${width}%`};
+  display: grid;
+  grid-column-gap: 0.75rem;
+  grid-row-gap: 0.75rem;
+  grid-template-columns: ${({ col = "auto" }) => col};
+  grid-auto-flow: column;
+`;
+
+export const ImgCol = styled.div`
+  position: relative;
+  display: grid;
+  grid-column-gap: 0.75rem;
+  grid-row-gap: 0.75rem;
+  grid-auto-flow: row;
 `;

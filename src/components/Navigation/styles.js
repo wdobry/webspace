@@ -81,6 +81,7 @@ export const LinksWrapper = styled.div`
   position: fixed;
   right: 13rem;
   display: flex;
+  z-index: 0;
 `;
 
 export const Link = styled.a`

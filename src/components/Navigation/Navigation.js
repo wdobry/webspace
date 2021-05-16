@@ -23,7 +23,6 @@ export const Navigation = () => {
       <S.LinksWrapper>
         <S.Link>Work</S.Link>
         <S.Link>Resume</S.Link>
-        <S.Link>About</S.Link>
       </S.LinksWrapper>
       <S.Button>
         Let's talk!

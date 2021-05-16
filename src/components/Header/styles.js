@@ -13,24 +13,35 @@ export const Title = styled.h1`
   line-height: 1.6rem;
   margin-bottom: 1rem;
   font-weight: 500;
-  display: none;
 `;
 
 export const Heading = styled.h2`
   font-size: 2.2rem;
   font-weight: 700;
   max-width: calc((var(--g)) * 4.5);
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   line-height: 3.2rem;
 `;
 
 export const Paragraph = styled.div`
   line-height: 1.6rem;
   max-width: calc((var(--g)) * 3.2);
+  opacity: 0.8;
   & u {
     text-decoration-color: hsl(0, 0%, 70%);
     &:hover {
       text-decoration-color: hsl(0, 0%, 20%);
     }
   }
+`;
+
+export const Upper = styled.span`
+  display: inline-block;
+  font-size: 1.25rem;
+  font-weight: 700;
+  transform: translateY(-0.75rem);
+  line-height: 3.2rem;
+  margin: 0;
+  padding: 0;
+  margin-bottom: -1rem;
 `;

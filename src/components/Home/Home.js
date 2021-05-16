@@ -8,9 +8,11 @@ import phaseCard from "assets/phase/card.png";
 import motherlodeCard from "assets/motherlode/card.png";
 import upiesCard from "assets/upies/card.png";
 
+import * as S from "./styles";
+
 export const Home = () => {
   return (
-    <div>
+    <S.Wrapper>
       <Header />
       <ProjectsHeader />
       <ProjectCard
@@ -29,7 +31,7 @@ export const Home = () => {
       <ProjectCard
         linkTo={"motherlode"}
         image={motherlodeCard}
-        background={"0, 0%, 94%"}
+        background={"0, 0%, 98%"}
         foreground={"0, 0%, 18%"}
         data={{
           domain: "Mobile App",
@@ -52,7 +54,7 @@ export const Home = () => {
           role: "UI + UX + Brand + Code",
         }}
       />
-    </div>
+    </S.Wrapper>
   );
 };
 

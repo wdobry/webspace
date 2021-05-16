@@ -12,7 +12,7 @@ export const Hero = styled.img`
 
 export const Wrapper = styled.div`
   position: relative;
-  margin: 3rem calc((100vw / 14) * 3 - 2rem);
+  margin: 3rem 0;
   padding: 2rem;
   border-radius: 0.5rem;
   background: ${({ background }) => `hsla(${background}, 1)`};

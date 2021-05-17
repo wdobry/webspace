@@ -27,7 +27,9 @@ export const Paragraph = styled.div`
   line-height: 1.6rem;
   max-width: calc((var(--g)) * 3.2);
   opacity: 0.8;
-  & u {
+  & a {
+    text-decoration: underline;
+    color: inherit;
     text-decoration-color: hsl(0, 0%, 70%);
     &:hover {
       text-decoration-color: hsl(0, 0%, 20%);

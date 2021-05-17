@@ -19,6 +19,7 @@ export const Heading = styled.h2`
   font-weight: 700;
   max-width: calc((var(--g)) * 4.5);
   line-height: 3.2rem;
+  margin-bottom: 0.5rem;
 `;
 
 export const Paragraph = styled.div`

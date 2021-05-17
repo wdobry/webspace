@@ -26,7 +26,7 @@ export const Navigation = () => {
           Résumé
         </S.Link>
       </S.LinksWrapper>
-      <S.Button>
+      <S.Button href="mailto:wdobry@gmail.com" target="blank">
         Let's talk!
         <S.Bulb />
       </S.Button>

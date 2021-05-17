@@ -13,7 +13,13 @@ export const Header = () => {
       </S.Heading>
       <S.Paragraph>
         Educated as an architect-engineer. Love creative coding. Hyper maniac of{" "}
-        <u>a{"\u00A0"}systemic approach to everything</u>.
+        <a
+          href="https://www.afscet.asso.fr/Archives/Systemic-Approach-eng.pdf"
+          target="blank"
+        >
+          a{"\u00A0"}systemic approach to everything
+        </a>
+        .
       </S.Paragraph>
       <S.Hero src={hero} />
     </>

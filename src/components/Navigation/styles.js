@@ -96,7 +96,7 @@ export const Link = styled.a`
   }
 `;
 
-export const Button = styled.button`
+export const Button = styled.a`
   position: fixed;
   right: 4rem;
   display: flex;

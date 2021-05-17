@@ -41,7 +41,7 @@ export const Upies = () => {
         if I could share my ideas uninterrupted? Could I express myself fully
         with a video?
         <br />
-        <br />I came up with a personal challenge - build a product that answers
+        <br />I came up with a personal challenge — build a product that answers
         these questions. I wanted to move as fast as possible and do it now.
         That's why I've decided to make the whole MVP of Upies entirely by
         myself.
@@ -63,7 +63,7 @@ export const Upies = () => {
         I diagramed the basic architecture and data structure, the user flow and
         started coding. I didn't stop until I had working user accounts, video
         upload, and workspace management. That was enough for me to validate
-        tech (oh boy, I was wrong). Anyway - I had a "working" product, and it
+        tech (oh boy, I was wrong). Anyway — I had a "working" product, and it
         was time to dress it appropriately.
       </S.Paragraph>
       <S.Spacer s={2} />

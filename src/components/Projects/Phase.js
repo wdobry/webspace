@@ -55,8 +55,8 @@ export const Phase = () => {
       <S.Paragraph>
         Create a design software ready for the digital era. A software that
         flawlessly deals with stateful elements, adaptive layouts, digital
-        input, code output, and much more. This case study covers over 2 years
-        of work in a nutshell.
+        input, code output, and much more. This case study summarizes over 2
+        years of work in a nutshell.
       </S.Paragraph>
       <S.Spacer s={3} />
       <SkillTable foreground={F} background={B} />
@@ -72,11 +72,11 @@ export const Phase = () => {
       <S.Img rad={0.25} src={i_process} width={50}></S.Img>
       <S.Spacer s={2} />
       <S.Paragraph>
-        Proposal - processing and gathering early-stage ideas
+        Proposal — processing and gathering early-stage ideas
         <br />
-        Stride - actionable document containing feature specs
+        Stride — actionable document containing feature specs
         <br />
-        North Star - current status of each model - updated with each change
+        North Star — current status of each model — updated with each change
       </S.Paragraph>
       <S.Spacer s={1} />
       <S.ALink
@@ -114,8 +114,9 @@ export const Phase = () => {
         design presented us with a different problem. In design software, every
         interface pixel is expensive. Our goal was to maximize "canvas" space
         without losing any legibility. On the high level, we grouped the
-        interface by the execution context. From there, we applied several
-        different techniques to develop a robust and modular design system.
+        interface components by execution context. From there, we applied
+        several different techniques to develop a robust and modular design
+        system.
       </S.Paragraph>
       <S.Spacer s={2} />
       <S.ImgRow col="1fr 1fr 1fr">
@@ -133,8 +134,7 @@ export const Phase = () => {
         <br />
         Secondly, parametric and modular grids helped us frame and maintain all
         components. Finally, using space, padding, and module variables, I have
-        created a solid yet easily customizable system. The last major part laid
-        in the typographic
+        created a solid yet easily customizable system.
         <br />
         <br />
         The last major part laid in the typographic research. I've started with
@@ -145,17 +145,17 @@ export const Phase = () => {
       <S.Spacer s={1} />
       <S.SectionTitle>Interfaces and Models</S.SectionTitle>
       <S.Paragraph>
-        Phase has dozens of interrelated interfaces and models. Creating each
-        one of them was a project on its own. They had to collectively
+        Phase has dozens of interrelated interfaces and models. We treated each
+        one of them as a project in their own right. They had to collectively
         contribute to the core building blocks of interaction design.
       </S.Paragraph>
       <S.Spacer s={2} />
       <S.Img rad={0.25} src={i_inter01} width={50}></S.Img>
       <S.Spacer s={2} />
       <S.Paragraph>
-        I've been working on models addressed to 3 primary user groups yet
+        I've been working on models addressed to three primary user groups yet
         dressed with the same, higher-order design system. On top of that, each
-        interface was operating within its own context and affecting the entire
+        interface was operating within its own context yet affecting the entire
         system.
       </S.Paragraph>
       <S.Spacer s={2} />
@@ -164,7 +164,7 @@ export const Phase = () => {
       <S.Paragraph>
         In the design team, in almost every sprint, we were cross-checking all
         models and interfaces, looking for possible simplifications. One of the
-        measurements of "simplicity" we used was the number of steps required to
+        measurements of simplicity we used was the number of steps required to
         accomplish the desired action.
       </S.Paragraph>
       <S.Spacer s={2} />
@@ -175,8 +175,8 @@ export const Phase = () => {
       <S.Spacer s={1} />
       <S.SectionTitle>Language and Status Visibility</S.SectionTitle>
       <S.Paragraph>
-        One of the challenges was to create a consistent messaging system. One
-        that would have a proper balance between legibility and space
+        Creating a consistent messaging system was one of the key challenges -
+        one that would have a proper balance between legibility and space
         occupation. Besides color-coding messages and minimizing the number of
         message icons, we focused on maximum language clarity.
       </S.Paragraph>
@@ -185,17 +185,17 @@ export const Phase = () => {
       <S.Spacer s={2} />
       <S.Paragraph>
         Another linguistic challenge was to name all the novel interfaces in a
-        way they could be understood by different types of users. During this
-        process, we've tested and changed several naming conventions based on
-        user feedback.
+        way that they could be understood by different types of users. During
+        this process, we've tested and changed several naming conventions based
+        on user feedback.
       </S.Paragraph>
       <S.Spacer s={1} />
       <S.SectionTitle>Users, Community, and the Team</S.SectionTitle>
       <S.Paragraph>
-        My work wasn't just design-centered. Across 2 years, I've facilitated
-        numerous team meetings - discussing, analyzing, and solving design
+        My work wasn't just design-centered. Over those two years, I facilitated
+        numerous team meetings — discussing, analyzing, and solving design
         engineering and organization problems. Moreover, almost every day, I was
-        in close touch with our users - gathering feedback, running tests, or
+        in close touch with our users — gathering feedback, running tests, or
         simply networking.
       </S.Paragraph>
       <S.Spacer s={2} />
@@ -226,7 +226,7 @@ export const Phase = () => {
       <S.Spacer s={1} />
       <S.SectionTitle>Measuring Success, Final Thoughts</S.SectionTitle>
       <S.Paragraph>
-        In Phase, we've measured success in different areas - from setting up
+        In Phase, we've measured success in different areas — from setting up
         and quarterly checking our company and design team OKR's, monitoring
         NPS's, measuring task completion time and success rates, and others.
         <br />
@@ -237,8 +237,8 @@ export const Phase = () => {
         <br />
         <br />
         This case study covers only a fraction of the things we did at Phase
-        during my time there. All of the work above wouldn't happen without Nick
-        Budden (CEO, initial idea) and the entire Phase team.
+        during my time there. All of the work above wouldn not have happen
+        without Nick Budden (CEO, initial idea) and the entire Phase team.
       </S.Paragraph>
       <S.Spacer s={4} />
     </S.Wrapper>

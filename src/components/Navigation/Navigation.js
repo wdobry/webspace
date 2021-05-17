@@ -21,8 +21,7 @@ export const Navigation = () => {
         </S.Info>
       </S.InfoWrapper>
       <S.LinksWrapper>
-        <S.Link>Work</S.Link>
-        <S.Link>Resume</S.Link>
+        <S.Link href="%PUBLIC_URL%/wojciech_dobry_cv.pdf">Resume</S.Link>
       </S.LinksWrapper>
       <S.Button>
         Let's talk!

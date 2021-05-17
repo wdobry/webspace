@@ -91,6 +91,7 @@ export const Link = styled.a`
   transition: all 0.15s ease;
   cursor: pointer;
   opacity: 1;
+  color: inherit;
   &:hover {
     opacity: 0.5;
   }

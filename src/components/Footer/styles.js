@@ -56,6 +56,22 @@ export const CLink = styled.a`
   }
 `;
 
+export const PLink = styled.a`
+  color: inherit;
+  border-radius: 0.5rem;
+  margin-right: 1rem;
+  opacity: 0.8;
+  margin-bottom: 1.3rem;
+  text-decoration: underline;
+  text-decoration-color: hsla(0, 0%, 60%, 1);
+  &:hover {
+    text-decoration-color: hsla(0, 0%, 60%, 0.2);
+  }
+  &:hover {
+    opacity: 1;
+  }
+`;
+
 export const Spacer = styled.div`
   width: 100%;
   height: ${({ s = 4 }) => `${s}rem`};
@@ -63,5 +79,16 @@ export const Spacer = styled.div`
 
 export const LinksWrapper = styled.div`
   display: flex;
-  max-width: 35%;
+`;
+
+export const AboutWrapper = styled.div`
+  display: block;
+  max-width: 50%;
+  margin-right: 4rem;
+`;
+
+export const PubWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 `;

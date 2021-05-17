@@ -22,7 +22,9 @@ export const Navigation = () => {
         </S.Info>
       </S.InfoWrapper>
       <S.LinksWrapper>
-        <S.Link href={resume}>Résumé</S.Link>
+        <S.Link href={resume} target="blank">
+          Résumé
+        </S.Link>
       </S.LinksWrapper>
       <S.Button>
         Let's talk!

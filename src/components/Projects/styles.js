@@ -150,3 +150,17 @@ export const ImgCol = styled.div`
   grid-row-gap: 0.75rem;
   grid-auto-flow: row;
 `;
+
+export const ALink = styled.a`
+  color: ${({ color }) => `hsla(${color}, 1)`};
+  text-decoration: underline;
+  width: 50%;
+  text-align: center;
+  background: ${({ color }) => `hsla(${color}, 0.05)`};
+  padding: 0.75rem;
+  text-decoration-color: hsla(0, 0%, 70%, 1);
+  border-radius: 0.5rem;
+  &:hover {
+    text-decoration-color: hsla(0, 0%, 20%, 0.5);
+  }
+`;

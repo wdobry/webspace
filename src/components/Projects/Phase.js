@@ -79,6 +79,14 @@ export const Phase = () => {
         North Star - current status of each model - updated with each change
       </S.Paragraph>
       <S.Spacer s={1} />
+      <S.ALink
+        href="https://blog.prototypr.io/north-star-product-management-b463fa1ff8a"
+        target="blank"
+        color={F}
+      >
+        Read our article about North Star management
+      </S.ALink>
+      <S.Spacer s={1} />
       <S.SectionTitle>System Complexity Maintenance</S.SectionTitle>
       <S.Paragraph>
         Creating a complex and interactive system requires a clear and
@@ -245,24 +253,18 @@ const SkillTable = ({ foreground, background }) => {
       <S.Column>
         <S.ColumnTitle>Role</S.ColumnTitle>
         <S.Row>Lead Designer</S.Row>
-        <S.ColumnTitle>Team Size</S.ColumnTitle>
-        <S.Row>1-3 (design)</S.Row>
-        <S.Row>7-12 (company)</S.Row>
       </S.Column>
       <S.Divider foreground={foreground} background={background} />
       <S.Column>
         <S.ColumnTitle>Methodologies</S.ColumnTitle>
         <S.Row>North Star</S.Row>
-        <S.Row>User Story Mapping</S.Row>
         <S.Row>SysML</S.Row>
       </S.Column>
       <S.Divider foreground={foreground} background={background} />
       <S.Column>
-        <S.ColumnTitle>Technologies</S.ColumnTitle>
-        <S.Row>React</S.Row>
-        <S.Row>Node.js</S.Row>
-        <S.Row>React Spring</S.Row>
-        <S.Row>Figma</S.Row>
+        <S.ColumnTitle>Team Size</S.ColumnTitle>
+        <S.Row>1-3 (design)</S.Row>
+        <S.Row>7-12 (company)</S.Row>
       </S.Column>
       <S.Divider foreground={foreground} background={background} />
       <S.Column>

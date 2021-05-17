@@ -1,10 +1,9 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  margin: 4rem calc((var(--g)));
-  padding: 6rem calc(var(--g) * 2 - 2rem);
+  margin: 4rem calc((var(--g) * 1)) 6rem;
+  padding: 0 calc(var(--g) * 2 - 2rem);
   border-radius: 0.5rem;
-  background: var(--c-light);
 `;
 
 export const Title = styled.h1`
@@ -16,16 +15,15 @@ export const Title = styled.h1`
 `;
 
 export const Heading = styled.h2`
-  font-size: 2.2rem;
+  font-size: 1.2rem;
   font-weight: 700;
   max-width: calc((var(--g)) * 4.5);
-  margin-bottom: 1rem;
   line-height: 3.2rem;
 `;
 
 export const Paragraph = styled.div`
   line-height: 1.6rem;
-  max-width: calc((var(--g)) * 3.2);
+  max-width: calc((var(--g)) * 5);
   opacity: 0.8;
   & u {
     text-decoration-color: hsl(0, 0%, 70%);
@@ -46,9 +44,24 @@ export const Upper = styled.span`
   margin-bottom: -1rem;
 `;
 
-export const Hero = styled.img`
-  position: absolute;
-  right: calc((var(--g) + 4rem));
-  top: calc((var(--g) + 6rem));
-  width: 45%;
+export const CLink = styled.a`
+  color: inherit;
+  background: hsla(0, 0%, 90%, 1);
+  font-size: 0.9rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  margin-right: 1rem;
+  &:hover {
+    opacity: 0.7;
+  }
+`;
+
+export const Spacer = styled.div`
+  width: 100%;
+  height: ${({ s = 4 }) => `${s}rem`};
+`;
+
+export const LinksWrapper = styled.div`
+  display: flex;
+  max-width: 35%;
 `;

@@ -1,6 +1,8 @@
 import React from "react";
 import * as S from "./styles.js";
 
+import hero from "assets/hero.png";
+
 export const Header = () => {
   return (
     <>
@@ -13,6 +15,7 @@ export const Header = () => {
         Educated as an architect-engineer. Love creative coding. Hyper maniac of{" "}
         <u>a{"\u00A0"}systemic approach to everything</u>.
       </S.Paragraph>
+      <S.Hero src={hero} />
     </>
   );
 };

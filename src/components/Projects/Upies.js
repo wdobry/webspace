@@ -35,7 +35,7 @@ export const Upies = () => {
         <S.Img src={i1} width={80}></S.Img>
       </S.Center>
       <S.Spacer s={2} />
-      <S.SectionTitle>The Challange</S.SectionTitle>
+      <S.SectionTitle>The Challenge</S.SectionTitle>
       <S.Paragraph>
         What if I could attend a meeting at any time I feel comfortable with? Or
         if I could share my ideas uninterrupted? Could I express myself fully

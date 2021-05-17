@@ -51,7 +51,7 @@ export const Phase = () => {
         <S.Img rad={0.25} src={i_hero} width={80}></S.Img>
       </S.Center>
       <S.Spacer s={2} />
-      <S.SectionTitle>The Challange</S.SectionTitle>
+      <S.SectionTitle>The Challenge</S.SectionTitle>
       <S.Paragraph>
         Create a design software ready for the digital era. A software that
         flawlessly deals with stateful elements, adaptive layouts, digital

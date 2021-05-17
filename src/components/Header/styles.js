@@ -51,4 +51,5 @@ export const Hero = styled.img`
   right: calc((var(--g) + 4rem));
   top: calc((var(--g) + 6rem));
   width: 45%;
+  pointer-events: none;
 `;

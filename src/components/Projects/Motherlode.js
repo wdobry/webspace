@@ -125,32 +125,3 @@ export const Motherlode = () => {
 };
 
 export default Motherlode;
-
-const SkillTable = ({ foreground, background }) => {
-  return (
-    <S.TableWrapper>
-      <S.Column>
-        <S.ColumnTitle>Role</S.ColumnTitle>
-        <S.Row>Lead Designer</S.Row>
-      </S.Column>
-      <S.Divider foreground={foreground} background={background} />
-      <S.Column>
-        <S.ColumnTitle>Methodologies</S.ColumnTitle>
-        <S.Row>North Star</S.Row>
-        <S.Row>SysML</S.Row>
-      </S.Column>
-      <S.Divider foreground={foreground} background={background} />
-      <S.Column>
-        <S.ColumnTitle>Team Size</S.ColumnTitle>
-        <S.Row>1-3 (design)</S.Row>
-        <S.Row>7-12 (company)</S.Row>
-      </S.Column>
-      <S.Divider foreground={foreground} background={background} />
-      <S.Column>
-        <S.ColumnTitle>Platform</S.ColumnTitle>
-        <S.Row>Web</S.Row>
-        <S.Row>Desktop</S.Row>
-      </S.Column>
-    </S.TableWrapper>
-  );
-};

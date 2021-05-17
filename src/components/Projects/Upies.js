@@ -27,9 +27,9 @@ export const Upies = () => {
         <S.Heading>Equal and Fair Voice with Asynchronous Meetings</S.Heading>
         <S.Intro>
           Nowadays, many companies struggle with adjustments to remote work
-          culture. Meetings overload plus mediocre moderation leads to stressful
-          work environment. Being put in the environment alike pushed me into
-          thinking…
+          culture. Meetings overload plus mediocre moderation leads to a
+          stressful work environment. Being put in the environment alike pushed
+          me into thinking…
         </S.Intro>
         <S.Spacer />
         <S.Img src={i1} width={80}></S.Img>

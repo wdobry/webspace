@@ -7,6 +7,7 @@ import Footer from "components/Footer/Footer";
 
 import Upies from "components/Projects/Upies";
 import Phase from "components/Projects/Phase";
+import Motherlode from "components/Projects/Motherlode";
 
 import "Reset.css";
 import "App.css";
@@ -18,6 +19,7 @@ const App = () => {
       <Route path="/" children={<Home />} exact />
       <Route path="/upies" children={<Upies />} exact />
       <Route path="/phase" children={<Phase />} exact />
+      <Route path="/motherlode" children={<Motherlode />} exact />
       <Footer />
     </Router>
   );

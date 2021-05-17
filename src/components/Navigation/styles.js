@@ -78,10 +78,9 @@ export const InfoSecond = styled.div`
 `;
 
 export const LinksWrapper = styled.div`
-  position: fixed;
+  position: absolute;
   right: 13rem;
   display: flex;
-  z-index: 0;
 `;
 
 export const Link = styled.a`

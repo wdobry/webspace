@@ -2,6 +2,7 @@ import React from "react";
 
 import * as S from "./styles";
 import avatar from "assets/avatar.png";
+import resume from "assets/wojciech_dobry_cv.pdf";
 
 export const Navigation = () => {
   return (
@@ -21,7 +22,7 @@ export const Navigation = () => {
         </S.Info>
       </S.InfoWrapper>
       <S.LinksWrapper>
-        <S.Link href="%PUBLIC_URL%/wojciech_dobry_cv.pdf">Resume</S.Link>
+        <S.Link href={resume}>Résumé</S.Link>
       </S.LinksWrapper>
       <S.Button>
         Let's talk!

@@ -3,6 +3,53 @@
 :root {
   --c-light: hsl(0, 0%, 95%);
   --g: calc(100vw / 14);
+
+  /* Accent */
+  --c-acc-h: 55;
+  --c-acc-s: 100%;
+  --c-acc-l: 80%;
+
+  /* Canvas */
+  --c-can-h: 0;
+  --c-can-s: 0%;
+  --c-can-l: 98%;
+
+  /* Background */
+  --c-bgd-h: 0;
+  --c-bgd-s: 0%;
+  --c-bgd-l: 95%;
+
+  /* Foreground */
+  --c-fgd-h: 0;
+  --c-fgd-s: 0%;
+  --c-fgd-l: 7%;
+
+  /* Motherlode */
+  --c-b-mth-h: 0;
+  --c-b-mth-s: 0%;
+  --c-b-mth-l: 93%;
+
+  --c-f-mth-h: 221;
+  --c-f-mth-s: 0%;
+  --c-f-mth-l: 15%;
+
+  /* Phase */
+  --c-b-phs-h: 0;
+  --c-b-phs-s: 0%;
+  --c-b-phs-l: 90%;
+
+  --c-f-phs-h: 0;
+  --c-f-phs-s: 0%;
+  --c-f-phs-l: 15%;
+
+  /* Upies */
+  --c-b-ups-h: 24;
+  --c-b-ups-s: 100%;
+  --c-b-ups-l: 86%;
+
+  --c-f-ups-h: 169;
+  --c-f-ups-s: 100%;
+  --c-f-ups-l: 20%;
 }
 
 html {

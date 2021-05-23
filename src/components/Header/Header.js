@@ -1,28 +1,34 @@
 import React from "react";
-import * as S from "./styles.js";
+import * as G from "components/global.js";
 
-import hero from "assets/hero.png";
+// import hero from "assets/hero.png";
 
 export const Header = () => {
   return (
-    <>
-      <S.Heading>
-        Hi, I'm Wojciech,
-        <br />
-        Interaction <S.Upper>(HCI)</S.Upper> and Product Designer
-      </S.Heading>
-      <S.Paragraph>
-        Educated as an architect-engineer. Love creative coding. Hyper maniac of{" "}
-        <a
-          href="https://www.afscet.asso.fr/Archives/Systemic-Approach-eng.pdf"
-          target="blank"
-        >
-          a{"\u00A0"}systemic approach to everything
-        </a>
-        .
-      </S.Paragraph>
-      <S.Hero src={hero} />
-    </>
+    <G.LayVertical col={8}>
+      <G.LayVertical col={4}>
+        <G.TypoH1>
+          Hi, I'm Wojciech,
+          <br />
+          Interaction <G.TypoSup>(HCI)</G.TypoSup> and <br />
+          Product Designer
+        </G.TypoH1>
+        <G.LaySpaceV s={2} />
+        <G.TypoBody>
+          Educated as an architect-engineer.
+          <br />
+          Love creative coding. Hyper maniac of{" "}
+          <G.InlineLink
+            simple
+            href="https://www.afscet.asso.fr/Archives/Systemic-Approach-eng.pdf"
+            target="blank"
+          >
+            a{"\u00A0"}systemic approach to everything
+          </G.InlineLink>
+          .
+        </G.TypoBody>
+      </G.LayVertical>
+    </G.LayVertical>
   );
 };
 

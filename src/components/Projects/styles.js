@@ -96,41 +96,12 @@ export const TableWrapper = styled.div`
   align-items: flex-start;
   justify-content: space-between;
   flex-direction: row;
-  width: 50%;
+  width: 100%;
 `;
 
 export const Column = styled.div`
   position: relative;
   height: 100%;
-`;
-
-export const ColumnTitle = styled.p`
-  font-weight: 700;
-  margin-bottom: 1rem;
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  margin-top: 2.5rem;
-  &:first-child {
-    margin-top: 0;
-  }
-`;
-
-export const Row = styled.p`
-  font-weight: 400;
-  margin-bottom: 1rem;
-  line-height: 0.5rem;
-  font-size: 0.8rem;
-  opacity: 0.95;
-`;
-
-export const Divider = styled.div`
-  position: relative;
-  display: block;
-  width: 1px;
-  height: 8rem;
-  background: ${({ foreground, background }) =>
-    `linear-gradient(hsl(${foreground}) 0%, hsl(${foreground}) 50%, hsl(${background}) 100%);`};
-  opacity: 0.25;
 `;
 
 export const ImgRow = styled.div`

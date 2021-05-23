@@ -1,12 +1,12 @@
 import React from "react";
-import * as S from "./styles.js";
+import * as G from "components/global";
 
 export const ProjectsHeader = () => {
   return (
-    <S.Wrapper>
-      <S.Heading>Selected Work</S.Heading>
-      <S.Paragraph>2017 - 2021</S.Paragraph>
-    </S.Wrapper>
+    <G.LayVertical col={8} space={0} debug>
+      <G.TypoH3>Selected Work</G.TypoH3>
+      <G.TypoBody>2017 - 2021</G.TypoBody>
+    </G.LayVertical>
   );
 };
 

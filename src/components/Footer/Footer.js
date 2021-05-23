@@ -13,7 +13,7 @@ export const Header = () => {
             <G.LaySpaceV s={1} />
             <G.TypoBody>
               Wojciech Dobry is an independent consultant and digital product
-              designer. Wojciech specializes in rapid MVP validation for SaaS
+              designer. He specializes in rapid MVP validation for SaaS
               platforms, system design and interaction design. Trained as an
               architect, he is a hobbyist programmer.
             </G.TypoBody>

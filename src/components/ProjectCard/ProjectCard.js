@@ -1,6 +1,5 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import styled from "styled-components";
 
 import * as G from "components/global";
 
@@ -25,7 +24,7 @@ export const Header = ({ data, background, foreground, image, linkTo }) => {
             <G.LaySpaceV s={4} />
           </G.LayVertical>
           <G.ProjectCardImage>
-            <img src={image} />
+            <img src={image} alt="Project" />
           </G.ProjectCardImage>
         </G.LayHorizontal>
       </NavLink>

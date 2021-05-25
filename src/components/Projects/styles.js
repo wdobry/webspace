@@ -123,7 +123,7 @@ export const ImgCol = styled.div`
 `;
 
 export const ALink = styled.a`
-  color: ${({ color }) => `hsla(${color}, 1)`};
+  color: inherit;
   text-decoration: underline;
   width: 50%;
   text-align: center;
@@ -131,6 +131,7 @@ export const ALink = styled.a`
   padding: 0.75rem;
   text-decoration-color: hsla(0, 0%, 70%, 1);
   border-radius: 0.5rem;
+  pointer-events: all;
   &:hover {
     text-decoration-color: hsla(0, 0%, 20%, 0.5);
   }

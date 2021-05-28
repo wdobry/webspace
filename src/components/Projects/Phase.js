@@ -226,7 +226,8 @@ export const Phase = () => {
         <br />
         This case study covers only a fraction of the things we did at Phase
         during my time there. All of the work above wouldn not have happen
-        without Nick Budden (CEO, initial idea) and the entire Phase team.
+        without Nick Budden (CEO, initial idea), Vlad Shvets (CMO), Chad Duffy
+        (CTO) and the entire Phase team.
       </P.ProjectSection>
       <G.LaySpaceV s={6} />
     </P.ProjectWrapper>

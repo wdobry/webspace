@@ -67,6 +67,10 @@ export const Home = () => {
           }}
         />
         <G.LaySpaceV s={4} />
+        {/* <G.LayVertical col={8} space={0} debug>
+          <G.TypoH3>Research and Experiments</G.TypoH3>
+          <G.TypoBody>2017 - 2021</G.TypoBody>
+        </G.LayVertical> */}
       </G.LayVertical>
       <G.LaySpaceV s={2} />
     </G.LayVertical>

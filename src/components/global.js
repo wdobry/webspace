@@ -148,9 +148,9 @@ export const TypoSub = ({ children, center }) => {
   return <G.TypoSub center={center}>{children}</G.TypoSub>;
 };
 
-export const InlineLink = ({ children, text, simple }) => {
+export const InlineLink = ({ children, text, simple, href, target }) => {
   return (
-    <G.InlineLink text={text} simple={simple}>
+    <G.InlineLink text={text} simple={simple} href={href} target={target}>
       {children}
     </G.InlineLink>
   );

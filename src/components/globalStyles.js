@@ -118,7 +118,7 @@ export const LayVertical = styled.div`
     `};
   outline-offset: 0;
   z-index: ${({ z = 0 }) => z};
-  pointer-events: ${({ events = false }) => (events ? "all" : "none")};
+  pointer-events: ${({ events = true }) => (events ? "all" : "none")};
   ${debugerTransition};
 `;
 
@@ -158,7 +158,7 @@ export const LayHorizontal = styled.div`
     debugAll ? 0 : rad ? "0.5rem" : 0};
   outline-offset: 0;
   z-index: ${({ z = 0 }) => z};
-  pointer-events: ${({ events = false }) => (events ? "all" : "none")};
+  pointer-events: ${({ events = true }) => (events ? "all" : "none")};
   ${debugerTransition};
 `;
 
@@ -199,7 +199,7 @@ export const TypoH3 = styled.h3`
   /* ${({ debugAll }) => debugAll && wireframe} */
 `;
 
-export const TypoBody = styled.p`
+export const TypoBody = styled.div`
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.6rem;

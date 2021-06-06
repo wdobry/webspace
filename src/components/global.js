@@ -42,6 +42,7 @@ export const LayVertical = ({
   z,
   noSpread,
   events,
+  reference,
 }) => {
   const debugMode = useKeyPress("f");
 
@@ -59,6 +60,7 @@ export const LayVertical = ({
       noSpread={noSpread}
       debugAll={debugMode}
       events={events}
+      ref={reference}
     >
       {children}
     </G.LayVertical>

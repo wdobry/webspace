@@ -50,6 +50,15 @@
   --c-f-ups-h: 169;
   --c-f-ups-s: 100%;
   --c-f-ups-l: 20%;
+
+  /* Experimental */
+  --c-b-exp-h: 24;
+  --c-b-exp-s: 0%;
+  --c-b-exp-l: 71%;
+
+  --c-f-exp-h: 169;
+  --c-f-exp-s: 0%;
+  --c-f-exp-l: 12%;
 }
 
 html {

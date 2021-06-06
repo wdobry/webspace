@@ -9,7 +9,7 @@ import Upies from "components/Projects/Upies";
 import Phase from "components/Projects/Phase";
 import Motherlode from "components/Projects/Motherlode";
 import Kitchen from "components/Kitchen/Kitchen";
-import Perlin from "components/Experiments/Perlin";
+import Border from "components/Experiments/Border";
 
 import "Reset.css";
 import "App.css";
@@ -24,7 +24,7 @@ const App = () => {
         <Route path="/phase" children={<Phase />} exact />
         <Route path="/motherlode" children={<Motherlode />} exact />
         <Route path="/kitchen" children={<Kitchen />} exact />
-        <Route path="/perlin" children={<Perlin />} exact />
+        <Route path="/border" children={<Border />} exact />
       </Switch>
       <Footer />
     </Router>

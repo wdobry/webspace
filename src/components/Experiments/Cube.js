@@ -39,8 +39,8 @@ export const Cube = () => {
               <G.TypoH3 text={"f-mth"}>What is this?</G.TypoH3>
               <G.LaySpaceV s={1} />
               <G.TypoBody text={"f-mth"} col={2}>
-                Kulululu, in Polish, is an onomatopoeia for an rolling object.
-                Kulać - means to roll. If the objects rolls for long time you
+                Kulululu, in Polish, is an onomatopoeia for a rolling object.
+                Kulać - means to roll. If the thing rolls for a long time, you
                 can always add more{" "}
                 <span style={{ fontFamily: "monospace" }}>(loo's)</span> at the
                 end.

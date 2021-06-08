@@ -9,7 +9,7 @@ export const Header = () => {
         <G.LayHorizontal col={12} noSpread>
           <G.LaySpaceH s={12} />
           <G.LayVertical col={4}>
-            <G.TypoH3>About</G.TypoH3>
+            <G.TypoH3>About Author</G.TypoH3>
             <G.LaySpaceV s={1} />
             <G.TypoBody>
               Wojciech Dobry is an independent consultant and digital product

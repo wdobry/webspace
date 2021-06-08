@@ -1,7 +1,7 @@
 import React from "react";
 
 import avatar from "assets/avatar.png";
-import resume from "assets/wojciech_dobry_cv.pdf";
+// import resume from "assets/wojciech_dobry_cv.pdf";
 
 import * as G from "components/global";
 
@@ -39,9 +39,9 @@ export const Navigation = () => {
             About
           </G.ALink> */}
           <G.LaySpaceH s={2} />
-          <G.ALink href={resume} target="blank">
+          {/* <G.ALink href={resume} target="blank">
             Résumé
-          </G.ALink>
+          </G.ALink> */}
         </G.LayHorizontal>
       </G.LayHorizontal>
     </>

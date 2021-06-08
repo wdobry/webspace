@@ -12,7 +12,6 @@ export const Border = () => {
   return (
     <>
       <motion.div
-        className="XDDD"
         style={{ pointerEvents: "all" }}
         onMouseMove={(e) => handleMouseMove(e)}
       >

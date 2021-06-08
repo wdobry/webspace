@@ -10,6 +10,7 @@ import Phase from "components/Projects/Phase";
 import Motherlode from "components/Projects/Motherlode";
 import Kitchen from "components/Kitchen/Kitchen";
 import Border from "components/Experiments/Border";
+import Cube from "components/Experiments/Cube";
 
 import "Reset.css";
 import "App.css";
@@ -25,6 +26,7 @@ const App = () => {
         <Route path="/motherlode" children={<Motherlode />} exact />
         <Route path="/kitchen" children={<Kitchen />} exact />
         <Route path="/border" children={<Border />} exact />
+        <Route path="/kululululu" children={<Cube />} exact />
       </Switch>
       <Footer />
     </Router>

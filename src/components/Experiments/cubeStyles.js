@@ -23,8 +23,8 @@ const Side = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 4rem;
-  height: 4rem;
+  width: 6rem;
+  height: 6rem;
   border-radius: 0.5rem;
   padding: 2px;
   background: hsla(0, 0%, 100%, 1);
@@ -36,24 +36,24 @@ const Side = styled.div`
 `;
 
 export const Front = styled(Side)`
-  transform: translateZ(2rem);
+  transform: translateZ(3rem);
 `;
 
 export const Top = styled(Side)`
-  transform: rotateX(90deg) translateZ(2rem);
+  transform: rotateX(90deg) translateZ(3rem);
 `;
 
 export const Right = styled(Side)`
-  transform: rotateY(90deg) translateZ(2rem);
+  transform: rotateY(90deg) translateZ(3rem);
 `;
 
 export const Left = styled(Side)`
-  transform: rotateY(-90deg) translateZ(2rem);
+  transform: rotateY(-90deg) translateZ(3rem);
 `;
 export const Bottom = styled(Side)`
-  transform: rotateX(-90deg) translateZ(2rem);
+  transform: rotateX(-90deg) translateZ(3rem);
 `;
 
 export const Back = styled(Side)`
-  transform: rotateY(-180deg) translateZ(2rem);
+  transform: rotateY(-180deg) translateZ(3rem);
 `;

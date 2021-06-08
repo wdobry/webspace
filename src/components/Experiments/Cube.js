@@ -16,6 +16,14 @@ export const Cube = () => {
             <G.TypoH2 text={"f-mth"}>
               Kululululu <G.TypoSup>XD</G.TypoSup>
             </G.TypoH2>
+            <G.LayVertical col={3}>
+              <G.TypoBody text={"f-mth"} col={2}>
+                You can kulać{" "}
+                <span style={{ fontFamily: "monospace" }}>[ˈkulaʨ̑]</span> as
+                much as you want. Just tap and do{" "}
+                <span style={{ fontFamily: "monospace" }}>[kulululu]</span>.
+              </G.TypoBody>
+            </G.LayVertical>
             <G.LaySpaceV s={2} />
             <Box constraintsRef={constraintsRef} />
             <G.TypoBody text={"f-mth"}></G.TypoBody>
@@ -37,11 +45,7 @@ const Box = ({ constraintsRef }) => {
   };
 
   return (
-    <S.Wrapper
-      onClick={() => handleRandomRotation()}
-      drag
-      dragConstraints={constraintsRef}
-    >
+    <S.Wrapper onClick={() => handleRandomRotation()}>
       <S.WallsWrapper
         animate={{
           rotateY: rotation.y,

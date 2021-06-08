@@ -43,8 +43,8 @@ function getRandomInt(min, max) {
 
 const Box = ({ constraintsRef }) => {
   const [rotation, setRotation] = useState({
-    x: getRandomInt(1, 3) * 90,
-    y: getRandomInt(1, 3) * 90,
+    x: getRandomInt(2, 5) * 90,
+    y: getRandomInt(2, 5) * 90,
   });
 
   const handleRandomRotation = (rot) => {

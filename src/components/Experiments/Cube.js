@@ -14,7 +14,7 @@ export const Cube = () => {
           <G.LayVertical col={12} space={2} reference={constraintsRef}>
             <G.LaySpaceV s={0} />
             <G.TypoH2 text={"f-mth"}>
-              Kululululu <G.TypoSup>XD</G.TypoSup>
+              Kululululu <G.TypoSup>v 1.0.XD</G.TypoSup>
             </G.TypoH2>
             <G.LayVertical col={3}>
               <G.TypoBody text={"f-mth"} col={2}>

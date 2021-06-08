@@ -16,6 +16,11 @@ export const WallsWrapper = styled(motion.div)`
   justify-content: center;
   width: 4rem;
   transform-style: preserve-3d;
+  &:after {
+    width: 3rem;
+    height: 3rem;
+    background: red;
+  }
 `;
 
 const Side = styled.div`
@@ -25,11 +30,11 @@ const Side = styled.div`
   justify-content: center;
   width: 6rem;
   height: 6rem;
-  border-radius: 0.5rem;
-  padding: 2px;
-  background: hsla(0, 0%, 100%, 1);
-  border: 1px solid hsla(0, 0%, 50%, 0.5);
+  border-radius: 2px;
+  background: hsla(0, 0%, 95%, 1);
+  border: 1px solid hsla(0, 0%, 75%, 1);
   cursor: pointer;
+  box-shadow: inset 0 0 0.5rem 0 hsla(0, 0%, 100%, 1);
   &:hover {
     background: hsla(var(--c-acc-h), var(--c-acc-s), var(--c-acc-l), 1);
   }

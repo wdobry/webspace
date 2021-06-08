@@ -35,17 +35,29 @@ export const Cube = () => {
   );
 };
 
-const Box = ({ constraintsRef }) => {
-  const [rotation, setRotation] = useState({ x: 0, y: 0 });
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min) + min);
+}
 
-  const handleRandomRotation = () => {
-    let rand1 = (Math.ceil(Math.random() * 5) + 1) * 90;
-    let rand2 = (Math.ceil(Math.random() * 5) + 1) * 90;
+const Box = ({ constraintsRef }) => {
+  const [rotation, setRotation] = useState({
+    x: getRandomInt(1, 3) * 90,
+    y: getRandomInt(1, 3) * 90,
+  });
+
+  const handleRandomRotation = (rot) => {
+    let rand1 =
+      rot.x >= 720 ? getRandomInt(1, 4) * 90 : rot.x + getRandomInt(1, 4) * 90;
+    let rand2 =
+      rot.y >= 720 ? getRandomInt(1, 4) * 90 : rot.y + getRandomInt(1, 4) * 90;
+
     setRotation({ x: rand1, y: rand2 });
   };
 
   return (
-    <S.Wrapper onClick={() => handleRandomRotation()}>
+    <S.Wrapper onClick={() => handleRandomRotation(rotation)}>
       <S.WallsWrapper
         animate={{
           rotateY: rotation.y,

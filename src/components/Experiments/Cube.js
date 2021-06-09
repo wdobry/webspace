@@ -6,57 +6,67 @@ export const Cube = () => {
   const constraintsRef = useRef();
 
   return (
-    <>
-      <G.LayVertical center style={{ pointerEvents: "all" }}>
-        <G.LaySpaceV s={8} />
-        <G.LayVertical col={12} background="b-mth">
-          <G.LaySpaceV s={4} />
-          <G.LayVertical col={12} space={2} reference={constraintsRef}>
-            <G.LaySpaceV s={2} />
-            <G.TypoH2 text={"f-mth"}>
-              Kululululu <G.TypoSup>1.0.XD</G.TypoSup>
-            </G.TypoH2>
-            <G.LayVertical col={3}>
-              <G.TypoBody text={"f-mth"} col={2}>
-                You can kulać{" "}
-                <span style={{ fontFamily: "monospace" }}>(/koolatch/)</span> as
-                much as you want. Just drag and drop to hear kulululu{" "}
-                <span style={{ fontFamily: "monospace" }}>
-                  (/koo-loo-loo-loo)
-                </span>
-                .
-              </G.TypoBody>
-            </G.LayVertical>
-            <G.LaySpaceV s={2} />
+    <G.Layout center mCenter style={{ pointerEvents: "all" }}>
+      <G.LaySpaceV s={8} ms={0} />
+      <G.Layout
+        col={12}
+        space={2}
+        center
+        mCenter
+        background="b-mth"
+        reference={constraintsRef}
+      >
+        <G.LaySpaceV s={4} />
+        <G.Layout col={12} mCol={13} space={2}>
+          <G.LaySpaceV s={2} ms={6} />
+          <G.Layout horizontal mCenter col={8} mCol={13} z={3}>
+            <G.Layout col={4} mCol={13}>
+              <G.TypoH2 text={"f-mth"}>
+                Kululululu <G.TypoSup>1.0.XD</G.TypoSup>
+              </G.TypoH2>
+              <G.LaySpaceV s={1} ms={1} />
+              <G.Layout col={3} mCol={13}>
+                <G.TypoBody text={"f-mth"} col={2}>
+                  You can kulać{" "}
+                  <span style={{ fontFamily: "monospace" }}>(/koolatch/)</span>{" "}
+                  as much as you want. Just drag and drop to hear kulululu{" "}
+                  <span style={{ fontFamily: "monospace" }}>
+                    (/koo-loo-loo-loo)
+                  </span>
+                  .
+                </G.TypoBody>
+              </G.Layout>
+              <G.LaySpaceV s={0} ms={3} />
+            </G.Layout>
             <S.CubeLay>
               <Box constraintsRef={constraintsRef} />
               <G.TypoInfo text={"f-mth"} col={2} center>
-                Drag me
+                Drag Me (ง ͠° ͟ل͜ ͡°)ง
               </G.TypoInfo>
             </S.CubeLay>
-            <G.LaySpaceV s={3} />
-            <G.LayVertical col={4}>
-              <G.TypoH3 text={"f-mth"}>What is this?</G.TypoH3>
-              <G.LaySpaceV s={1} />
-              <G.TypoBody text={"f-mth"} col={2}>
-                Kulululu, in Polish, is an onomatopoeia for a rolling object.
-                Kulać - means to roll. If the thing rolls for a long time, you
-                can always add more{" "}
-                <span style={{ fontFamily: "monospace" }}>(loo's)</span> at the
-                end.
-                <br />
-                <br />
-                This page is just my exploration of springs with Framer Motion
-                library, and testing its limits.
-              </G.TypoBody>
-            </G.LayVertical>
-            <G.LaySpaceV s={2} />
-            <G.TypoBody text={"f-mth"}></G.TypoBody>
-          </G.LayVertical>
-          <G.LaySpaceV s={4} />
-        </G.LayVertical>
-      </G.LayVertical>
-    </>
+          </G.Layout>
+          <G.LaySpaceV s={3} ms={3} />
+          <G.Layout col={4} mCol={12}>
+            <G.TypoH3 text={"f-mth"}>What is this?</G.TypoH3>
+            <G.LaySpaceV s={1} ms={1} />
+            <G.TypoBody text={"f-mth"} col={2}>
+              Kulululu, in Polish, is an onomatopoeia for a rolling object.
+              Kulać - means to roll. If the thing rolls for a long time, you can
+              always add more{" "}
+              <span style={{ fontFamily: "monospace" }}>(loo's)</span> at the
+              end.
+              <br />
+              <br />
+              This page is just my exploration of springs with Framer Motion
+              library, and testing its limits.
+            </G.TypoBody>
+          </G.Layout>
+          <G.LaySpaceV s={2} />
+          <G.TypoBody text={"f-mth"}></G.TypoBody>
+        </G.Layout>
+        <G.LaySpaceV s={4} />
+      </G.Layout>
+    </G.Layout>
   );
 };
 
@@ -76,10 +86,10 @@ const Box = ({ constraintsRef }) => {
   const [dragYRotation, setDragYRotation] = useState(0);
 
   const handleRandomRotation = (rot) => {
-    let rand1 =
-      rot.x >= 720 ? getRandomInt(1, 3) * 90 : rot.x + getRandomInt(1, 3) * 90;
-    let rand2 =
-      rot.y >= 720 ? getRandomInt(1, 3) * 90 : rot.y + getRandomInt(1, 3) * 90;
+    console.log("Drag end has fired.");
+
+    let rand1 = rot.x + getRandomInt(1, 3) * 90;
+    let rand2 = rot.y + getRandomInt(1, 3) * 90;
 
     setRotation({ x: rand1, y: rand2 });
   };

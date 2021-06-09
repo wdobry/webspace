@@ -39,7 +39,9 @@ export const Upies = () => {
         work environment. Being put in the environment alike pushed me into
         thinking…
       </P.ProjectIntro>
-      <S.Img src={i1} width={80}></S.Img>
+      <S.ImgRow col="1fr">
+        <S.Img src={i1} width={100}></S.Img>
+      </S.ImgRow>
       <P.ProjectSection foreground="f-ups" title="The Challenge">
         What if I could attend a meeting at any time I feel comfortable with? Or
         if I could share my ideas uninterrupted? Could I express myself fully
@@ -59,7 +61,7 @@ export const Upies = () => {
         problems.
       </P.ProjectSection>
       <G.LaySpaceV s={2} />
-      <S.Img src={i2} width={50}></S.Img>
+      <S.Img src={i2} width={50} mWidth={120}></S.Img>
       <P.ProjectSection foreground="f-ups">
         I diagramed the basic architecture and data structure, the user flow and
         started coding. I didn't stop until I had working user accounts, video
@@ -68,7 +70,7 @@ export const Upies = () => {
         was time to dress it appropriately.
       </P.ProjectSection>
       <G.LaySpaceV s={2} />
-      <S.Img src={i3} width={50}></S.Img>
+      <S.Img src={i3} width={50} mWidth={92.5}></S.Img>
       <P.ProjectSection foreground="f-ups" title="Defining the Tone">
         The majority of Upies was designed from code, without any design
         software. Therefore, the design initially has a notably neutral tone. On
@@ -77,7 +79,7 @@ export const Upies = () => {
         touch." To add some life into this very generic style and save time,
         I've decided to use a stock illustration set by Alzea Arafat.
       </P.ProjectSection>
-      <S.Img src={i4} width={100}></S.Img>
+      <S.Img src={i4} width={100} mWidth={185}></S.Img>
       <P.ProjectSection foreground="f-ups">
         I've created design tokens as my design system building blocks. The main
         goal of this approach was to prepare the app for customization by each
@@ -86,9 +88,9 @@ export const Upies = () => {
         add a gradient variation to each color that was in use.
       </P.ProjectSection>
       <G.LaySpaceV s={2} />
-      <S.Img src={i5} width={50}></S.Img>
+      <S.Img src={i5} width={50} mWidth={92.5}></S.Img>
       <G.LaySpaceV s={1} />
-      <S.Img src={i6} width={50}></S.Img>
+      <S.Img src={i6} width={50} mWidth={92.5}></S.Img>
       <P.ProjectSection foreground="f-ups" title="Wrapping Everything Around">
         Testing the product all the way throughout the process helped me
         realized early pain points for the users. Some people struggled with
@@ -96,7 +98,7 @@ export const Upies = () => {
         decided to design a simple landing page that would explain the concept.
       </P.ProjectSection>
       <G.LaySpaceV s={2} />
-      <S.Img src={i7} width={80}></S.Img>
+      <S.Img src={i7} width={80} mWidth={105}></S.Img>
       <P.ProjectSection foreground="f-ups">
         To achieve a minimalistic appearance, Upies is packed with
         micro-interactions and small interfaces. Each interface is always
@@ -105,7 +107,7 @@ export const Upies = () => {
         team.
       </P.ProjectSection>
       <G.LaySpaceV s={2} />
-      <S.Img src={i8} width={80}></S.Img>
+      <S.Img src={i8} width={80} mWidth={102.5}></S.Img>
       <P.ProjectSection foreground="f-ups" title="Further Steps">
         Upies is an ongoing solo project. I constantly test it with various
         teams and build a roadmap based on the feedback. One of the nearest
@@ -114,7 +116,7 @@ export const Upies = () => {
         goal is to help remote teams communicate better and to encourage an
         equal and fair voice for all team members.
       </P.ProjectSection>
-      <S.Img src={i9} width={100}></S.Img>
+      <S.Img src={i9} width={100} mWidth={185}></S.Img>
     </P.ProjectWrapper>
   );
 };

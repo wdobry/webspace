@@ -61,6 +61,9 @@ export const Img = styled.img`
   width: ${({ width = 100 }) => `${width}%`};
   pointer-events: none;
   border-radius: ${({ rad = 0 }) => `${rad}rem`};
+  @media (max-width: 768px) {
+    width: ${({ mWidth = 100 }) => `${mWidth}%`};
+  }
 `;
 
 export const Intro = styled.p`
@@ -97,6 +100,9 @@ export const TableWrapper = styled.div`
   justify-content: space-between;
   flex-direction: row;
   width: 100%;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 export const Column = styled.div`
@@ -108,10 +114,18 @@ export const ImgRow = styled.div`
   position: relative;
   width: ${({ width = 80 }) => `${width}%`};
   display: grid;
+  justify-items: center;
   grid-column-gap: 0.75rem;
   grid-row-gap: 0.75rem;
   grid-template-columns: ${({ col = "auto" }) => col};
   grid-auto-flow: column;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    grid-template-columns: 1fr;
+    grid-auto-flow: row;
+    width: ${({ mWidth = 100 }) => `${mWidth}%`};
+    max-width: calc(100% - 2rem);
+  }
 `;
 
 export const ImgCol = styled.div`
@@ -134,5 +148,9 @@ export const ALink = styled.a`
   pointer-events: all;
   &:hover {
     text-decoration-color: hsla(0, 0%, 20%, 0.5);
+  }
+  @media (max-width: 768px) {
+    width: calc(100% - 2rem);
+    line-height: 150%;
   }
 `;

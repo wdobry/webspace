@@ -3,20 +3,24 @@ import * as G from "components/global";
 import * as S from "./styles";
 
 export const ProjectWrapper = ({ children, background }) => (
-  <G.LayVertical center>
-    <G.LaySpaceV s={8} />
-    <G.LayVertical col={12} background={background} center>
-      <G.LaySpaceV s={4} />
-      {children}
-    </G.LayVertical>
-  </G.LayVertical>
+  <div style={{ overflow: "hidden" }}>
+    <G.Layout center mCenter>
+      <G.LaySpaceV s={8} ms={0} />
+      <G.Layout col={12} background={background} center mCenter>
+        <G.LaySpaceV s={4} ms={6} />
+        {children}
+      </G.Layout>
+    </G.Layout>
+  </div>
 );
 
 export const ProjectIntro = ({ date, title, children, foreground }) => (
-  <G.LayVertical col={12} space={3}>
+  <G.Layout col={12} mCol={13} space={3}>
     <G.TypoInfo text={foreground} center>
       {date}
     </G.TypoInfo>
+    <G.LaySpaceV s={0} ms={1} />
+
     <G.TypoH1 text={foreground} center>
       {title}
     </G.TypoH1>
@@ -25,11 +29,11 @@ export const ProjectIntro = ({ date, title, children, foreground }) => (
       {children}
     </G.TypoBody>
     <G.LaySpaceV s={2} />
-  </G.LayVertical>
+  </G.Layout>
 );
 
 export const ProjectSection = ({ title, children, foreground }) => (
-  <G.LayVertical col={12} space={3}>
+  <G.Layout col={12} mCol={13} space={3}>
     <G.LaySpaceV s={2} />
     {title && (
       <>
@@ -38,14 +42,14 @@ export const ProjectSection = ({ title, children, foreground }) => (
       </>
     )}
     <G.TypoBody text={foreground}>{children}</G.TypoBody>
-  </G.LayVertical>
+  </G.Layout>
 );
 
 export const SkillTable = ({ foreground, background, data }) => {
   const columns = Object.keys(data);
 
   return (
-    <G.LayVertical col={12} space={3}>
+    <G.Layout col={12} mCol={13} space={3}>
       <G.LaySpaceV s={2} />
       <S.TableWrapper>
         {columns.map((column, i) => (
@@ -62,6 +66,6 @@ export const SkillTable = ({ foreground, background, data }) => {
           </>
         ))}
       </S.TableWrapper>
-    </G.LayVertical>
+    </G.Layout>
   );
 };

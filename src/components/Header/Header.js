@@ -5,8 +5,8 @@ import * as G from "components/global.js";
 
 export const Header = () => {
   return (
-    <G.LayVertical col={8}>
-      <G.LayVertical col={4}>
+    <G.Layout col={8} mCenter>
+      <G.Layout col={4} mCol={13}>
         <G.TypoH1>
           Hi, I'm Wojciech,
           <br />
@@ -27,8 +27,8 @@ export const Header = () => {
           </G.InlineLink>
           .
         </G.TypoBody>
-      </G.LayVertical>
-    </G.LayVertical>
+      </G.Layout>
+    </G.Layout>
   );
 };
 

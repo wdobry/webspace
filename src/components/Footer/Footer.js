@@ -5,12 +5,12 @@ export const Header = () => {
   return (
     <>
       <G.LaySpaceV s={4} />
-      <G.LayVertical center z={0}>
-        <G.LayHorizontal col={12} noSpread>
+      <G.Layout center mCenter z={0}>
+        <G.Layout horizontal col={12} mCol={13} noSpread>
           <G.LaySpaceH s={12} />
-          <G.LayVertical col={4}>
+          <G.Layout col={4} mCol={13}>
             <G.TypoH3>About Author</G.TypoH3>
-            <G.LaySpaceV s={1} />
+            <G.LaySpaceV s={1} ms={1} />
             <G.TypoBody>
               Wojciech Dobry is an independent consultant and digital product
               designer. He specializes in rapid MVP validation for SaaS
@@ -18,7 +18,7 @@ export const Header = () => {
               architect, he is a hobbyist programmer.
             </G.TypoBody>
             <G.LaySpaceV s={1} />
-            <G.LayHorizontal auto noSpread>
+            <G.Layout horizontal mHorizontal auto noSpread>
               <G.TertiaryButton
                 href="https://www.linkedin.com/in/wojciech-dobry/"
                 target="blank"
@@ -36,13 +36,14 @@ export const Header = () => {
               <G.TertiaryButton href="mailto:wdobry@gmail.com" target="blank">
                 Email
               </G.TertiaryButton>
-            </G.LayHorizontal>
-          </G.LayVertical>
+            </G.Layout>
+          </G.Layout>
           <G.LaySpaceH s={5} />
-          <G.LayVertical col={3.5}>
+          <G.LaySpaceV s={0} ms={4} />
+          <G.Layout col={3.5} mCol={13}>
             <G.TypoH3>Selected Publications</G.TypoH3>
-            <G.LaySpaceV s={1} />
-            <G.LayVertical col={3.5}>
+            <G.LaySpaceV s={1} ms={1} />
+            <G.Layout col={3.5} mCol={13}>
               <G.TypoBody>
                 <G.InlineLink
                   simple
@@ -51,7 +52,7 @@ export const Header = () => {
                 >
                   Prototyping with Real Data
                 </G.InlineLink>
-                <G.LaySpaceV s={0.8} />
+                <G.LaySpaceV s={0.8} ms={0.8} />
                 <G.InlineLink
                   simple
                   href="https://www.toptal.com/designers/ui/design-framework"
@@ -59,7 +60,7 @@ export const Header = () => {
                 >
                   Building an Effective Design Framework
                 </G.InlineLink>
-                <G.LaySpaceV s={0.8} />
+                <G.LaySpaceV s={0.8} ms={0.8} />
                 <G.InlineLink
                   simple
                   href="https://www.toptal.com/designers/ui/future-ui-design-without-buttons"
@@ -68,11 +69,11 @@ export const Header = () => {
                   Future UI Design Without Buttons
                 </G.InlineLink>
               </G.TypoBody>
-            </G.LayVertical>
-          </G.LayVertical>
-        </G.LayHorizontal>
-        <G.LaySpaceV s={4} />
-      </G.LayVertical>
+            </G.Layout>
+          </G.Layout>
+        </G.Layout>
+        <G.LaySpaceV s={4} ms={4} />
+      </G.Layout>
     </>
   );
 };

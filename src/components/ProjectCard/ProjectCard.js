@@ -7,14 +7,21 @@ export const Header = ({ data, background, foreground, image, linkTo }) => {
   return (
     <>
       <NavLink to={linkTo} exact>
-        <G.LayHorizontal col={8.8} space={0.4} background={background}>
-          <G.LayVertical col={3}>
+        <G.Layout
+          horizontal
+          col={8.8}
+          space={0.4}
+          background={background}
+          mCol={13}
+          mSpace={0.5}
+        >
+          <G.Layout col={3} mCol={12}>
             <G.LaySpaceV s={4} />
-            <G.LayVertical auto>
+            <G.Layout auto>
               <G.TypoInfo text={foreground}>{data.domain}</G.TypoInfo>
               <G.LaySpaceV s={1} />
               <G.TypoH2 text={foreground}>{data.title}</G.TypoH2>
-            </G.LayVertical>
+            </G.Layout>
             <G.LaySpaceV s={4} />
             <G.TypoInfo bold text={foreground}>
               {data.company}
@@ -22,11 +29,11 @@ export const Header = ({ data, background, foreground, image, linkTo }) => {
             <G.TypoInfo text={foreground}>{data.date}</G.TypoInfo>
             <G.TypoInfo text={foreground}>{data.role}</G.TypoInfo>
             <G.LaySpaceV s={4} />
-          </G.LayVertical>
+          </G.Layout>
           <G.ProjectCardImage>
             <img src={image} alt="Project" />
           </G.ProjectCardImage>
-        </G.LayHorizontal>
+        </G.Layout>
       </NavLink>
       <G.LaySpaceV s={4} />
     </>

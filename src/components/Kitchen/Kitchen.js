@@ -10,8 +10,8 @@ const lipsum = (length = 1) => {
 
 export const Kitchen = () => {
   return (
-    <G.LayVertical center>
-      <G.LayVertical col={12} background={"bgd"} space={2}>
+    <G.Layout center>
+      <G.Layout col={12} background={"bgd"} space={2}>
         <G.LaySpaceV s={8} />
         <G.UtilityText>Heading 1</G.UtilityText>
         <G.TypoH1>{lipsum(2)}</G.TypoH1>
@@ -38,32 +38,32 @@ export const Kitchen = () => {
         <G.TypoInfo>Decoration Title</G.TypoInfo>
         <G.TypoInfo bold>Decoration Text</G.TypoInfo>
         <G.LaySpaceV s={2} />
-        <G.LayHorizontal col={8} noSpread>
-          <G.LayVertical auto>
+        <G.Layout horizontal col={8} noSpread>
+          <G.Layout auto>
             <G.UtilityText>Primary Button</G.UtilityText>
             <G.ButtonPrimary bold>Click Me</G.ButtonPrimary>
-          </G.LayVertical>
+          </G.Layout>
           <G.LaySpaceH s={2} />
-          <G.LayVertical auto>
+          <G.Layout auto>
             <G.UtilityText>Secondary Button</G.UtilityText>
             <G.SecondaryButton bold>Click Me</G.SecondaryButton>
-          </G.LayVertical>
-        </G.LayHorizontal>
+          </G.Layout>
+        </G.Layout>
         <G.LaySpaceV s={2} />
-        <G.LayHorizontal col={8} noSpread>
-          <G.LayVertical auto>
+        <G.Layout horizontal col={8} noSpread>
+          <G.Layout auto>
             <G.UtilityText>Inline Link</G.UtilityText>
             <G.InlineLink>Clicky Go</G.InlineLink>
-          </G.LayVertical>
+          </G.Layout>
           <G.LaySpaceH s={2} />
-          <G.LayVertical auto>
+          <G.Layout auto>
             <G.UtilityText>Nav Link</G.UtilityText>
             <G.ALink>Clicky Go</G.ALink>
-          </G.LayVertical>
-        </G.LayHorizontal>
+          </G.Layout>
+        </G.Layout>
         <G.LaySpaceV s={2} />
-      </G.LayVertical>
-    </G.LayVertical>
+      </G.Layout>
+    </G.Layout>
   );
 };
 

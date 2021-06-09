@@ -22,6 +22,8 @@ const wireframe = `
   text-decoration-skip: objects spaces;
 `;
 
+const mobileQueries = "max-width: 768px";
+
 const debugerTransition = "transition: none";
 
 export const UtilityText = styled.p`
@@ -36,6 +38,9 @@ export const LaySpaceV = styled.div`
   position: relative;
   display: block;
   height: ${({ s = 4 }) => `${s}rem`};
+  @media (${mobileQueries}) {
+    height: ${({ ms = 2 }) => `${ms}rem`};
+  }
   ${({ debugAll }) =>
     debugAll &&
     `width: 100%;
@@ -43,6 +48,7 @@ export const LaySpaceV = styled.div`
    border-radius: none;
   `}
   ${debugerTransition};
+
   ::after {
     display: ${({ debugAll }) => (debugAll ? "block" : "none")};
     position: absolute;
@@ -62,6 +68,10 @@ export const LaySpaceH = styled.div`
   display: block;
   width: ${({ s = 4 }) => `${s}rem`};
   min-width: ${({ s = 4 }) => `${s}rem`};
+  @media (${mobileQueries}) {
+    width: ${({ ms = 2 }) => `${ms}rem`};
+    min-width: ${({ ms = 2 }) => `${ms}rem`};
+  }
   ${({ debugAll }) =>
     debugAll &&
     `
@@ -84,48 +94,11 @@ export const LaySpaceH = styled.div`
   }
 `;
 
-export const LayVertical = styled.div`
+export const Layout = styled.div`
   position: ${({ fixed = false }) => (fixed ? "fixed" : "relative")};
   display: flex;
-  flex-direction: column;
-  align-items: ${({ center = false }) => (center ? "center" : "flex-start")};
-  justify-content: space-between;
-  width: ${({ col = 14, space = 0, auto = false }) =>
-    auto ? "auto" : columns(col - space * 2)};
-  padding: ${({ space = 0 }) => `0 ${columns(space)}`};
-  background: ${({ background }) =>
-    background ? color(background, 1) : "none"};
-  border-radius: ${({ rad = true, debugAll }) =>
-    debugAll ? 0 : rad ? "0.5rem" : 0};
-  outline: ${({ debugAll }) =>
-    debugAll
-      ? "1px solid hsla(0,100%,50%,0.5)"
-      : "1px solid hsla(0,100%,50%,0)"};
-  color: ${({ text = "fgd" }) => color(text, 1)};
-  height: ${({ height = "auto" }) =>
-    height === "auto" ? "auto" : `${height}rem`};
-  & * ::selection {
-    color: inherit;
-    background: ${color("acc", 1)};
-  }
-  box-shadow: ${({ space = 0, debugAll }) =>
-    debugAll
-      ? `inset ${columns(space)} 0 0 0 ${debugColor},
-     inset ${columns(-space)} 0 0 0 ${debugColor}
-    `
-      : `inset ${columns(space)} 0 0 0 hsla(0,0%,0%,0),
-     inset ${columns(-space)} 0 0 0 hsla(0,0%,0%,0)
-    `};
-  outline-offset: 0;
-  z-index: ${({ z = 0 }) => z};
-  pointer-events: ${({ events = true }) => (events ? "all" : "none")};
-  ${debugerTransition};
-`;
-
-export const LayHorizontal = styled.div`
-  position: ${({ fixed = false }) => (fixed ? "fixed" : "relative")};
-  display: flex;
-  flex-direction: row;
+  flex-direction: ${({ horizontal = false }) =>
+    horizontal ? "row" : "column"};
   align-items: ${({ center = false }) => (center ? "center" : "flex-start")};
   justify-content: ${({ noSpread = false }) =>
     noSpread ? "flex-start" : "space-between"};
@@ -134,7 +107,8 @@ export const LayHorizontal = styled.div`
   padding: ${({ space = 0 }) => `0 ${columns(space)}`};
   background: ${({ background }) =>
     background ? color(background, 1) : "none"};
-  border-radius: ${({ rad }) => (rad ? "0.5rem" : 0)};
+  border-radius: ${({ rad = true, debugAll }) =>
+    debugAll ? 0 : rad ? "0.5rem" : 0};
   outline: ${({ debugAll }) =>
     debugAll
       ? "1px solid hsla(0,100%,50%,0.5)"
@@ -154,18 +128,29 @@ export const LayHorizontal = styled.div`
       : `inset ${columns(space)} 0 0 0 hsla(0,0%,0%,0),
      inset ${columns(-space)} 0 0 0 hsla(0,0%,0%,0)
     `};
-  border-radius: ${({ rad = true, debugAll }) =>
-    debugAll ? 0 : rad ? "0.5rem" : 0};
   outline-offset: 0;
   z-index: ${({ z = 0 }) => z};
   pointer-events: ${({ events = true }) => (events ? "all" : "none")};
   ${debugerTransition};
+  @media (${mobileQueries}) {
+    display: ${({ mNone }) => (mNone ? "none" : "flex")};
+    flex-direction: ${({ mHorizontal = false }) =>
+      mHorizontal ? "row" : "column"};
+    width: ${({ mCol = 14, mSpace = 0, auto = false }) =>
+      auto ? "auto" : columns(mCol - mSpace * 2)};
+    height: ${({ mHeight = "auto" }) =>
+      mHeight === "auto" ? "auto" : `${mHeight}rem`};
+    padding: ${({ mSpace = 0 }) => `0 ${columns(mSpace)}`};
+    align-items: ${({ mCenter = false }) =>
+      mCenter ? "center" : "flex-start"};
+  }
 `;
 
 export const TypoH1 = styled.h1`
   font-size: 2.2rem;
   font-weight: 700;
   line-height: 3.2rem;
+  width: 100%;
   max-width: ${columns(6)};
   color: ${({ text = "fgd" }) => color(text, 1)};
   pointer-events: all;
@@ -173,11 +158,15 @@ export const TypoH1 = styled.h1`
   white-space: pre-wrap;
   width: 100%;
   /* ${({ debugAll }) => debugAll && wireframe} */
+  @media (${mobileQueries}) {
+    max-width: ${columns(14)};
+  }
 `;
 export const TypoH2 = styled.h2`
   font-size: 1.8rem;
   font-weight: 700;
   line-height: 2.8rem;
+  width: 100%;
   max-width: ${columns(6)};
   color: ${({ text = "fgd" }) => color(text, 1)};
   pointer-events: all;
@@ -185,11 +174,15 @@ export const TypoH2 = styled.h2`
   white-space: pre-wrap;
   width: 100%;
   /* ${({ debugAll }) => debugAll && wireframe} */
+  @media (${mobileQueries}) {
+    max-width: ${columns(14)};
+  }
 `;
 export const TypoH3 = styled.h3`
   font-size: 1.4rem;
   font-weight: 700;
   line-height: 2.2rem;
+  width: 100%;
   max-width: ${columns(6)};
   color: ${({ text = "fgd" }) => color(text, 1)};
   pointer-events: all;
@@ -197,12 +190,16 @@ export const TypoH3 = styled.h3`
   white-space: pre-wrap;
   width: 100%;
   /* ${({ debugAll }) => debugAll && wireframe} */
+  @media (${mobileQueries}) {
+    max-width: ${columns(14)};
+  }
 `;
 
 export const TypoBody = styled.div`
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.6rem;
+  width: 100%;
   max-width: ${columns(6)};
   color: ${({ text = "fgd" }) => color(text, 1)};
   pointer-events: all;
@@ -210,6 +207,9 @@ export const TypoBody = styled.div`
   white-space: pre-wrap;
   width: 100%;
   /* ${({ debugAll }) => debugAll && wireframe} */
+  @media (${mobileQueries}) {
+    max-width: ${columns(14)};
+  }
 `;
 
 export const TypoSup = styled.span`
@@ -483,6 +483,11 @@ export const Divider = styled.div`
       background
     )} 100%);`};
   opacity: 0.25;
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 1px;
+    margin-bottom: 1rem;
+  }
 `;
 
 export const ProjectCardImage = styled.div`
@@ -496,5 +501,8 @@ export const ProjectCardImage = styled.div`
   & img {
     margin-top: 4rem;
     width: 120%;
+  }
+  @media (${mobileQueries}) {
+    display: none;
   }
 `;

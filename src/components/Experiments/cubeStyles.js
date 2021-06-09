@@ -1,24 +1,35 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
+const cubeSize = 12;
+const mCubeSize = 8;
+
 export const Wrapper = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 10rem;
-  height: 10rem;
+  width: ${cubeSize}rem;
+  height: ${cubeSize}rem;
   perspective: 2000px;
   z-index: 10;
+  @media (max-width: 768px) {
+    width: ${mCubeSize}rem;
+    height: ${mCubeSize}rem;
+  }
 `;
 
 export const WallsWrapper = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 4rem;
-  height: 4rem;
+  width: ${cubeSize}rem;
+  height: ${cubeSize}rem;
   transform-style: preserve-3d;
   margin-bottom: 1rem;
+  @media (max-width: 768px) {
+    width: ${mCubeSize}rem;
+    height: ${mCubeSize}rem;
+  }
 `;
 
 const Side = styled.div`
@@ -26,8 +37,8 @@ const Side = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 10rem;
-  height: 10rem;
+  width: ${cubeSize}rem;
+  height: ${cubeSize}rem;
   border-radius: 2px;
   background: hsla(0, 0%, 95%, 1);
   border: 1px solid hsla(0, 0%, 75%, 1);
@@ -37,29 +48,51 @@ const Side = styled.div`
   &:hover {
     background: hsla(var(--c-acc-h), var(--c-acc-s), var(--c-acc-l), 1);
   }
+  @media (max-width: 768px) {
+    width: ${mCubeSize}rem;
+    height: ${mCubeSize}rem;
+  }
 `;
 
 export const Front = styled(Side)`
-  transform: translateZ(5rem);
+  transform: translateZ(${cubeSize / 2}rem);
+  @media (max-width: 768px) {
+    transform: translateZ(${mCubeSize / 2}rem);
+  }
 `;
 
 export const Top = styled(Side)`
-  transform: rotateX(90deg) translateZ(5rem);
+  transform: rotateX(90deg) translateZ(${cubeSize / 2}rem);
+  @media (max-width: 768px) {
+    transform: rotateX(90deg) translateZ(${mCubeSize / 2}rem);
+  }
 `;
 
 export const Right = styled(Side)`
-  transform: rotateY(90deg) translateZ(5rem);
+  transform: rotateY(90deg) translateZ(${cubeSize / 2}rem);
+  @media (max-width: 768px) {
+    transform: rotateY(90deg) translateZ(${mCubeSize / 2}rem);
+  }
 `;
 
 export const Left = styled(Side)`
-  transform: rotateY(-90deg) translateZ(5rem);
+  transform: rotateY(-90deg) translateZ(${cubeSize / 2}rem);
+  @media (max-width: 768px) {
+    transform: rotateY(-90deg) translateZ(${mCubeSize / 2}rem);
+  }
 `;
 export const Bottom = styled(Side)`
-  transform: rotateX(-90deg) translateZ(5rem);
+  transform: rotateX(-90deg) translateZ(${cubeSize / 2}rem);
+  @media (max-width: 768px) {
+    transform: rotateX(-90deg) translateZ(${mCubeSize / 2}rem);
+  }
 `;
 
 export const Back = styled(Side)`
-  transform: rotateY(-180deg) translateZ(5rem);
+  transform: rotateY(-180deg) translateZ(${cubeSize / 2}rem);
+  @media (max-width: 768px) {
+    transform: rotateY(-180deg) translateZ(${mCubeSize / 2}rem);
+  }
 `;
 
 export const CubeLay = styled.div`
@@ -68,11 +101,18 @@ export const CubeLay = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  top: 0;
+  right: 0;
   border: 1px dashed hsla(0, 0%, 0%, 0.2);
-  z-index: 10;
-  top: 2rem;
-  right: 12rem;
   padding: 1rem;
   padding-top: 2rem;
   border-radius: 0.5rem;
+  transform-origin: left center;
+  @media (max-width: 768px) {
+    position: relative;
+    top: 0;
+    right: 0;
+    width: calc(100% - 2rem);
+    transform: scale(1);
+  }
 `;

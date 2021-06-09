@@ -9,29 +9,30 @@ export const UtilityText = ({ children }) => {
   return <G.UtilityText>{children}</G.UtilityText>;
 };
 
-export const LaySpaceV = ({ children, s }) => {
+export const LaySpaceV = ({ children, s, ms }) => {
   const debugMode = useKeyPress("f");
 
   return (
-    <G.LaySpaceV s={s} debugAll={debugMode}>
+    <G.LaySpaceV s={s} ms={ms} debugAll={debugMode}>
       {children}
     </G.LaySpaceV>
   );
 };
 
-export const LaySpaceH = ({ children, s }) => {
+export const LaySpaceH = ({ children, s, ms }) => {
   const debugMode = useKeyPress("f");
 
   return (
-    <G.LaySpaceH s={s} debugAll={debugMode}>
+    <G.LaySpaceH s={s} ms={ms} debugAll={debugMode}>
       {children}
     </G.LaySpaceH>
   );
 };
 
-export const LayVertical = ({
+export const Layout = ({
   children,
   fixed,
+  horizontal,
   center,
   col,
   space,
@@ -43,12 +44,19 @@ export const LayVertical = ({
   noSpread,
   events,
   reference,
+  mNone,
+  mHorizontal,
+  mCol,
+  mSpace,
+  mCenter,
+  mHeight,
 }) => {
   const debugMode = useKeyPress("f");
 
   return (
-    <G.LayVertical
+    <G.Layout
       fixed={fixed}
+      horizontal={horizontal}
       center={center}
       col={col}
       space={space}
@@ -61,45 +69,15 @@ export const LayVertical = ({
       debugAll={debugMode}
       events={events}
       ref={reference}
+      mNone={mNone}
+      mHorizontal={mHorizontal}
+      mCol={mCol}
+      mSpace={mSpace}
+      mCenter={mCenter}
+      mHeight={mHeight}
     >
       {children}
-    </G.LayVertical>
-  );
-};
-
-export const LayHorizontal = ({
-  children,
-  fixed,
-  center,
-  col,
-  space,
-  auto,
-  background,
-  rad,
-  height,
-  z,
-  noSpread,
-  events,
-}) => {
-  const debugMode = useKeyPress("f");
-
-  return (
-    <G.LayHorizontal
-      fixed={fixed}
-      center={center}
-      col={col}
-      space={space}
-      auto={auto}
-      background={background}
-      rad={rad}
-      height={height}
-      z={z}
-      noSpread={noSpread}
-      debugAll={debugMode}
-      events={events}
-    >
-      {children}
-    </G.LayHorizontal>
+    </G.Layout>
   );
 };
 

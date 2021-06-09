@@ -32,15 +32,16 @@ export const Motherlode = () => {
         relatively small group of people can buy-sell or exchange apparel. In
         addition, it is made for sharing ideas, outfits, and events.
       </P.ProjectIntro>
-      <S.Img rad={0.25} src={i_hero} width={100}></S.Img>
+      <S.Img rad={0.25} src={i_hero} width={100} mWidth={240}></S.Img>
       <P.ProjectSection foreground="f-mth" title="The Challenge">
         The streetwear community has been struggling with counterfeits and trust
         issues for far too long, yet no one tried to create something that is
         really tailored for its needs.
       </P.ProjectSection>
       <G.LaySpaceV s={2} />
-
-      <S.Img rad={0.25} src={challange} width={100}></S.Img>
+      <S.ImgRow col="1fr">
+        <S.Img rad={0.25} src={challange} width={100} mWidth={170}></S.Img>
+      </S.ImgRow>
       <P.ProjectSection foreground="f-mth" title="Process">
         To confirm product functionality and find early errors, I facilitated
         conversations among stakeholders through online meetings. High-fidelity
@@ -113,7 +114,7 @@ export const Motherlode = () => {
       </P.ProjectSection>
       <G.LaySpaceV s={2} />
 
-      <S.Img rad={0.25} src={last} width={100}></S.Img>
+      <S.Img rad={0.25} src={last} width={100} mWidth={150}></S.Img>
     </P.ProjectWrapper>
   );
 };

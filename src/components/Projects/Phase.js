@@ -50,7 +50,9 @@ export const Phase = () => {
         worked closely with users around the globe. Therefore, I've validated
         their feedback against our models and incorporated it within.
       </P.ProjectIntro>
-      <S.Img rad={0.25} src={i_hero} width={80}></S.Img>
+      <S.ImgRow col="1fr">
+        <S.Img rad={0.25} src={i_hero} width={100}></S.Img>
+      </S.ImgRow>
       <P.ProjectSection foreground="f-phs" title="The Challenge">
         Create a design software ready for the digital era. A software that
         flawlessly deals with stateful elements, adaptive layouts, digital
@@ -65,7 +67,9 @@ export const Phase = () => {
         management of complex specifications.
       </P.ProjectSection>
       <G.LaySpaceV s={2} />
-      <S.Img rad={0.25} src={i_process} width={50}></S.Img>
+      <S.ImgRow col="1fr">
+        <S.Img rad={0.25} src={i_process} width={62.5}></S.Img>
+      </S.ImgRow>
       <P.ProjectSection foreground="f-phs">
         Proposal — processing and gathering early-stage ideas
         <br />
@@ -139,7 +143,9 @@ export const Phase = () => {
         contribute to the core building blocks of interaction design.
       </P.ProjectSection>
       <G.LaySpaceV s={2} />
-      <S.Img rad={0.25} src={i_inter01} width={50}></S.Img>
+      <S.ImgRow col="1fr">
+        <S.Img rad={0.25} src={i_inter01} width={62.5}></S.Img>
+      </S.ImgRow>
       <P.ProjectSection foreground="f-phs">
         I've been working on models addressed to three primary user groups yet
         dressed with the same, higher-order design system. On top of that, each
@@ -147,7 +153,9 @@ export const Phase = () => {
         system.
       </P.ProjectSection>
       <G.LaySpaceV s={2} />
-      <S.Img rad={0.25} src={i_inter02} width={50}></S.Img>
+      <S.ImgRow col="1fr">
+        <S.Img rad={0.25} src={i_inter02} width={62.5}></S.Img>
+      </S.ImgRow>
       <P.ProjectSection foreground="f-phs">
         In the design team, in almost every sprint, we were cross-checking all
         models and interfaces, looking for possible simplifications. One of the
@@ -169,7 +177,9 @@ export const Phase = () => {
         message icons, we focused on maximum language clarity.
       </P.ProjectSection>
       <G.LaySpaceV s={2} />
-      <S.Img rad={0.25} src={i_lang} width={50}></S.Img>
+      <S.ImgRow col="1fr">
+        <S.Img rad={0.25} src={i_lang} width={62.5}></S.Img>
+      </S.ImgRow>
       <P.ProjectSection foreground="f-phs">
         Another linguistic challenge was to name all the novel interfaces in a
         way that they could be understood by different types of users. During
@@ -229,7 +239,7 @@ export const Phase = () => {
         without Nick Budden (CEO, initial idea), Vlad Shvets (CMO), Chad Duffy
         (CTO) and the entire Phase team.
       </P.ProjectSection>
-      <G.LaySpaceV s={6} />
+      <G.LaySpaceV s={6} ms={4} />
     </P.ProjectWrapper>
   );
 };

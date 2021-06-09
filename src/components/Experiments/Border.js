@@ -15,11 +15,11 @@ export const Border = () => {
         style={{ pointerEvents: "all" }}
         onMouseMove={(e) => handleMouseMove(e)}
       >
-        <G.LayVertical center>
+        <G.Layout center>
           <G.LaySpaceV s={8} />
-          <G.LayVertical col={12} background="f-exp">
+          <G.Layout col={12} background="f-exp">
             <G.LaySpaceV s={4} />
-            <G.LayVertical col={12} space={2}>
+            <G.Layout col={12} space={2}>
               <G.LaySpaceV s={0} />
               <G.TypoH2 text={"b-exp"}>
                 Absterial <G.TypoSup>UI</G.TypoSup>
@@ -37,7 +37,7 @@ export const Border = () => {
                 >
                   <S.Cursor></S.Cursor>
                 </motion.div>
-                <G.LayVertical col={3}>
+                <G.Layout col={3}>
                   <S.CardContent isFirst>
                     <G.TypoBody text={"b-exp"}>Hover me</G.TypoBody>
                     <motion.div
@@ -67,12 +67,12 @@ export const Border = () => {
                       <S.Cursor2></S.Cursor2>
                     </motion.div>
                   </S.CardContent>
-                </G.LayVertical>
+                </G.Layout>
               </S.Card>
-            </G.LayVertical>
+            </G.Layout>
             <G.LaySpaceV s={4} />
-          </G.LayVertical>
-        </G.LayVertical>
+          </G.Layout>
+        </G.Layout>
       </motion.div>
     </>
   );

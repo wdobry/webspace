@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 export const Perlin = () => {
   return (
     <>
-      <G.LayVertical center style={{ pointerEvents: "all" }}>
+      <G.Layout center style={{ pointerEvents: "all" }}>
         <G.LaySpaceV s={8} />
         <motion.div ref={boxRef} onMouseMove={(e) => handleMouseMove(e)}>
           <motion.div
@@ -15,18 +15,18 @@ export const Perlin = () => {
               y: mousePosition.y,
             }}
           ></motion.div>
-          <G.LayVertical col={12} background="b-mth">
+          <G.Layout col={12} background="b-mth">
             <G.LaySpaceV s={4} />
-            <G.LayVertical col={12} space={2}>
+            <G.Layout col={12} space={2}>
               <G.LaySpaceV s={0} />
               <G.TypoH2 text={"f-mth"}>Siemaaa</G.TypoH2>
               <G.LaySpaceV s={2} />
               <G.TypoBody text={"f-mth"}></G.TypoBody>
-            </G.LayVertical>
+            </G.Layout>
             <G.LaySpaceV s={4} />
-          </G.LayVertical>
+          </G.Layout>
         </motion.div>
-      </G.LayVertical>
+      </G.Layout>
     </>
   );
 };

@@ -3,10 +3,10 @@ import * as G from "components/global";
 
 export const ProjectsHeader = () => {
   return (
-    <G.LayVertical col={8} space={0} debug>
+    <G.Layout col={8} space={0} debug mCol={13}>
       <G.TypoH3>Selected Work</G.TypoH3>
       <G.TypoBody>2017 - 2021</G.TypoBody>
-    </G.LayVertical>
+    </G.Layout>
   );
 };
 

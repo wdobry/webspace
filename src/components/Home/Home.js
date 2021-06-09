@@ -12,19 +12,21 @@ import * as G from "components/global";
 
 export const Home = () => {
   return (
-    <G.LayVertical center>
-      <G.LaySpaceV s={8} />
-      <G.LayVertical
+    <G.Layout center>
+      <G.LaySpaceV s={8} ms={0} />
+      <G.Layout
         col={12}
         background={"bgd"}
         space={2}
         center
         noSpread
         events
+        mCol={14}
+        mCenter
       >
-        <G.LaySpaceV s={6} />
+        <G.LaySpaceV s={6} ms={10} />
         <Header />
-        <G.LaySpaceV s={6} />
+        <G.LaySpaceV s={6} ms={6} />
         <ProjectsHeader />
         <G.LaySpaceV s={2} />
         <ProjectCard
@@ -67,13 +69,13 @@ export const Home = () => {
           }}
         />
         <G.LaySpaceV s={4} />
-        {/* <G.LayVertical col={8} space={0} debug>
+        {/* <G.Layout col={8} space={0} debug>
           <G.TypoH3>Research and Experiments</G.TypoH3>
           <G.TypoBody>2017 - 2021</G.TypoBody>
-        </G.LayVertical> */}
-      </G.LayVertical>
+        </G.Layout> */}
+      </G.Layout>
       <G.LaySpaceV s={2} />
-    </G.LayVertical>
+    </G.Layout>
   );
 };
 

@@ -17,15 +17,8 @@ export const Header = () => {
         <G.TypoBody>
           Educated as an architect-engineer.
           <br />
-          Love creative coding. Hyper maniac of{" "}
-          <G.InlineLink
-            simple
-            href="https://www.afscet.asso.fr/Archives/Systemic-Approach-eng.pdf"
-            target="blank"
-          >
-            a{"\u00A0"}systemic approach to everything
-          </G.InlineLink>
-          .
+          Love creative coding. Hyper maniac of a{"\u00A0"}systemic approach to
+          everything .
         </G.TypoBody>
       </G.Layout>
     </G.Layout>
